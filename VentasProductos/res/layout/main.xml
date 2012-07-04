@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de Productos" />
+    
+     <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Java $ 150.25"
+        android:id="@+id/chkjava"
+      />
+
+      <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Delphi $ 100.00"
+        android:id="@+id/chkdelphi"
+      />
+      
+       <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ruby $ 95.66"
+        android:id="@+id/chkRuby"
+      />
+       
+        <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="PHP $ 60.00"
+        android:id="@+id/chkphp"
+      />
+        
+       <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Android $ 62.00"
+        android:id="@+id/chkandroid"
+      />
+       
+       <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Realizar la Compra"
+        android:id="@+id/btnrealizar"
+      />
+       
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Valor Total de la Compra" />
+        
+      <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etvalortotal"
+        android:textColor="#7CFC00"
+        android:enabled="false"
+        android:numeric="decimal"
+        />
+     
+</LinearLayout>
