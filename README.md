@@ -1,4 +1,4 @@
-AndroidDeveloperGropusResistencia
+AndroidDeveloperGroupsResistencia
 =================================
 
 Proyectos para Android Developer Groups Resistencia 06/2012
