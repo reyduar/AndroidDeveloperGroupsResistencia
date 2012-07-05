@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="@string/hello" 
+        android:textSize="30px"
+        android:layout_marginTop="20px"
+        />
+
+    <EditText
+        android:text="Nombre"
+        android:id="@+id/txtnombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:text="Teléfono"
+        android:id="@+id/txttelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numeric="integer"
+        android:layout_marginTop="30px"
+        />
+    <Button
+        android:id="@+id/btnguardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Contacto"
+        android:layout_marginTop="30px" 
+        />
+    <Button
+        android:id="@+id/btnllamar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Llamar Contacto" 
+        android:layout_marginTop="10px"
+        />
+    <Button
+        android:id="@+id/btneliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Contacto" 
+        android:layout_marginTop="10px"
+        />
+    <Button
+        android:id="@+id/btncerrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar" 
+        android:layout_marginTop="10px"
+        />
+</LinearLayout>

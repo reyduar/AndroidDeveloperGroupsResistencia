@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingrese Valor 1" />
+
+     <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+calculo/numero1"
+        android:numeric="integer"
+        />
+    
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingrese Valor 2" />
+      
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+calculo/numero2"
+        android:numeric="integer"
+        />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado" 
+       
+        />
+    
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+calculo/resultado"
+        android:numeric="integer"
+        android:enabled="false"
+        android:textColor="#ff0000"
+     />
+    
+     
+      
+    <LinearLayout
+      android:orientation="horizontal"    
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+    >
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+sumar/btnsumar"
+        android:text="Sumar" />
+    
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+restar/btnrestar"
+        android:text="Restar" />
+     
+      <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+multiplicar/btnmultiplicar"
+        android:text="Multiplicar" />
+      
+       <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+dividir/btndividir"
+        android:text="Dividir" />
+       
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+limpiar/btnlimpiar"
+        android:textColor="#ff0000"
+        android:text="CE" />
+    </LinearLayout>
+   
+   
+</LinearLayout>

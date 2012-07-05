@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">First app Android, Hello Android!</string>
+    <string name="developer">Developer: Ariel Duarte</string>
+     <string name="aceptar">Aceptar</string>
+	<string name="app_name">HelloAndroid</string>
+	
+</resources>
