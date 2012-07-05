@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+   <item
+        android:id="@+id/mnuagregar"
+        android:title="Agregar"
+        android:icon="@drawable/ic_menu_add"
+    />
+   
+    <item
+        android:id="@+id/mnuconsulta"
+        android:title="Consulta"
+        android:icon="@drawable/ic_menu_android"
+    />
+     <item
+        android:id="@+id/mnuacercade"
+        android:title="Autor"
+        android:icon="@drawable/ic_menu_king"
+    />
+     <item
+        android:id="@+id/mnusalir"
+        android:title="Salir"
+        android:icon="@drawable/ic_menu_cancel"
+    />
+</menu>
