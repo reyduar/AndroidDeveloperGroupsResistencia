@@ -1,3 +1,5 @@
+Copyright Ariel Duarte 2012
+
 Opciones para crear Cuentas
 ------------------------
 https://help.github.com/
@@ -116,7 +118,13 @@ Obs.: Falto configurar el Token por que no aparecio el codigo secreto donde debe
 
 
 
+8- Vamos a cambiar los comando git con algunas alias
 
+C:\test_automation\automation\iseatz_automation\project\amex\spec>git config --global alias.ct commit
+
+C:\test_automation\automation\iseatz_automation\project\amex\spec>git config --global alias.br branch
+
+C:\test_automation\automation\iseatz_automation\project\amex\spec>git config --global alias.co checkout
 [alias]
   st = status
   ct = commit
