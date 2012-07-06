@@ -1,0 +1,135 @@
+Opciones para crear Cuentas
+------------------------
+https://help.github.com/
+
+Ayuda para utilizar git en otros SO
+------------------------
+https://help.github.com/articles/set-up-git
+
+
+Para descargar git
+------------------------------------
+http://git-scm.com/
+
+Para descargar git for windows (msysgit)
+------------------------------------
+http://code.google.com/p/msysgit/downloads/list
+Descargar el : Git-1.7.11-preview20120620.exe
+
+Descargar installar
+---------------------------------------------
+C:\Program Files\Git\Git Bash.exe
+
+Lineas de Comandos Bash git
+----------------------------------------------
+1- Crear una clave SSH
+	*Verificar si existe una clave SSH en nuestro ordenador
+		~$ cd ~/.ssh
+	*En el caso de que ya tenemos claves creadas crear un backup
+		~$ ls
+	*Crear un directorio para las claves en caso de que todavia no este creado
+		~$ mkdir key_backup
+	*Url donde puedes ver los comando sin necesidad de escribirlo
+		http://help.github.com/win-set-up-git/
+	*Comando que Crea backup de claves
+		~$ cp id_rsa* key_backup
+	*Comando para borrar las claves git
+		~$ rm id_rsa*
+	*Comando para crear la nueva clave git y configuracion basica de git
+		~$ ssh-keygen -t rsa -C "androiddevgr@gmail.com"
+		--> nos pregunta en el directorio donde se guardata la clave (enter)
+		--> nos pide la contraseña: developer2012*	
+		--> se genera la clave: The key fingerprint is: 4a:cf:88:54:47:15:29:e7:ec:7e:7b:61:84:8d:19:c1 androiddevgr@gmail.com
+
+2- Crear una nueva cuenta para git
+	*Url para crear cuentas gratis
+		http://github.com/plans (Plans, Pricing and Signup)
+	* Plans & Pricing
+		Create a free account
+			Username: iarielduarte
+			Email Address: iariel.javauser@gmail.com
+			pass: developer1985*
+	* Account Settings
+	* add SSH key
+		Title: ClaveAndroid
+		Key: ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsJQQ/7Kpid5dxghADDx4/EH74nXCbdcCRiIfJoDMoonGEsvTN8+JERWlc9yAZeaJa5QsWws+nhlCz8hACtbcHh5anKWK9lY2oDnL1iTN4/eajQQi4PEsm1AGKvIuWWazSPq8jEm5DqYSzWO4f3odE0rbpmkue3vuvCaBpfHoFWhOIInfMAWeYSTxI2F26iKoXRYHriwZ3w2sr0mp7FUMlhsnf1vJ7+iYTbfLnhI/BxGYrj4QkAD18n+sZBBrSurAobluyfGt46cmp/IDxD3WbbVPfuyRENizkCjCABxrRlumEy38/ojL+cNaiUNxIzGuGz8EgBPj85kFawkWzJdrlw== androiddevgr@gmail.com
+		ClaveAndroid (4a:cf:88:54:47:15:29:e7:ec:7e:7b:61:84:8d:19:c1)
+	*Comprobar que la clave este bien configurada
+		~$ ssh git@github.com
+		pass: developer2012*
+Hasta aca ya tenemos nuestra clave SSH
+Hi iarielduarte! You've successfully authenticated, but GitHub does not provide
+shell access.
+Connection to github.com closed.
+
+3- Configurar cuenta git
+	* Usuario que se va indentificar en el grupo de desarrollo:
+		~$ git config --global user.name "iarielduarte"
+	* Email:
+		~$ git config --global user.email "iariel.javauser@gmail.com"
+	
+4- Configurar Token de la Api para poder usar git sin modo SSH
+	* Para poder saber el Sha que es un codigo secreto
+		~$ git config --global github.user iarielduarte
+Obs.: Falto configurar el Token por que no aparecio el codigo secreto donde deberia haber aparecido
+
+
+5- Inicializar y Configurar un repositorio
+	INIT : ~$ git init
+	
+ 	- Nos vamos hasta el archivo
+	~$ C:\Documents and Settings\reynaldo.duarte>cd C:\proyectosgit
+	
+	- Ejecutamos el comando 
+	~$ git init
+	C:\proyectosgit>git init
+	Initialized empty Git repository in C:/proyectosgit/.git/
+	
+	- Ahora añadimos los archivos del repositorio nuevo que acabamos de inicializar tiene un solo archivo de ejemplo
+	
+	~$ git init add EjemploAdd.txt
+	
+	- Ahora el archivo EjemploAdd.txt esta en el "staged", para que se agrege definitivamente ejecutamos el siguiente comando
+	
+	~$ git commit -m "Comit de nuestro primer repositorio"
+	
+6- Para clonar todo un repositorio que se encuentra en el Servidor y tenerlo de forma local se ejecuta como el siguiente ejemplo
+	
+	~$ git clone git@github.com:iarielduarte/AndroidDeveloperGroupsResistencia.git
+		
+	remote: Counting objects: 13, done.
+	remote: Compressing objects: 100% (13/13), done.
+	remote: Total 13 (delta 3), reused 0 (delta 0)
+	Receiving objects: 100% (13/13), done.
+	Resolving deltas: 100% (3/3), done.
+	
+	-Copia un repositorio git ya existencia y el proyecto ahora esta como "tracked and unmodified" porque aun todavia no se
+	 ha tocado nada para el proyecto existente.
+	
+	~$ git clone git@github.com:iarielduarte/AndroidDeveloperGroupsResistencia.git [nombre archivo]
+
+
+
+7- Ciclo de vida los archivos
+-->untracked : 
+
+
+
+
+
+[alias]
+  st = status
+  ct = commit
+  br = branch
+  co = checkout
+	
+
+	
+	
+
+git clone git@github.com:iarielduarte/FrameworkAutomationJava.git
+
+
+
+
+		
