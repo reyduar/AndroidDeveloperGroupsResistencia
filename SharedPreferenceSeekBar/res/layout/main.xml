@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textview01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Persistencia con Shared Preference"
+        android:layout_marginTop="20px"
+      />
+
+     <EditText
+        android:id="@+id/edittext01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingrese datos a persistir con Shared Preference"
+        android:layout_marginTop="20px"
+      />
+
+ 	<SeekBar 
+        android:id="@+id/seekbar01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+      />
+
+ 	<Button
+ 	    android:id="@+id/btnguardar"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:text="Guardar Preferencia"
+ 	    android:layout_marginTop="20px" />
+
+</LinearLayout>
+</ScrollView>
