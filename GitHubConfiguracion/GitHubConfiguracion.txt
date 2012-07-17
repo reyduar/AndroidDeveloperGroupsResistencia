@@ -69,7 +69,7 @@ Connection to github.com closed.
 		~$ git config --global user.name "iarielduarte"
 	* Email:
 		~$ git config --global user.email "iariel.javauser@gmail.com"
-	
+
 4- Configurar Token de la Api para poder usar git sin modo SSH
 	* Para poder saber el Sha que es un codigo secreto
 		~$ git config --global github.user iarielduarte
@@ -78,36 +78,36 @@ Obs.: Falto configurar el Token por que no aparecio el codigo secreto donde debe
 
 5- Inicializar y Configurar un repositorio
 	INIT : ~$ git init
-	
+
  	- Nos vamos hasta el archivo
 	~$ C:\Documents and Settings\reynaldo.duarte>cd C:\proyectosgit
-	
+
 	- Ejecutamos el comando 
 	~$ git init
 	C:\proyectosgit>git init
 	Initialized empty Git repository in C:/proyectosgit/.git/
-	
+
 	- Ahora añadimos los archivos del repositorio nuevo que acabamos de inicializar tiene un solo archivo de ejemplo
-	
+
 	~$ git init add EjemploAdd.txt
-	
+
 	- Ahora el archivo EjemploAdd.txt esta en el "staged", para que se agrege definitivamente ejecutamos el siguiente comando
-	
+
 	~$ git commit -m "Comit de nuestro primer repositorio"
-	
+
 6- Para clonar todo un repositorio que se encuentra en el Servidor y tenerlo de forma local se ejecuta como el siguiente ejemplo
-	
+
 	~$ git clone git@github.com:iarielduarte/AndroidDeveloperGroupsResistencia.git
-		
+
 	remote: Counting objects: 13, done.
 	remote: Compressing objects: 100% (13/13), done.
 	remote: Total 13 (delta 3), reused 0 (delta 0)
 	Receiving objects: 100% (13/13), done.
 	Resolving deltas: 100% (3/3), done.
-	
+
 	-Copia un repositorio git ya existencia y el proyecto ahora esta como "tracked and unmodified" porque aun todavia no se
 	 ha tocado nada para el proyecto existente.
-	
+
 	~$ git clone git@github.com:iarielduarte/AndroidDeveloperGroupsResistencia.git [nombre archivo]
 
 
@@ -130,14 +130,13 @@ C:\test_automation\automation\iseatz_automation\project\amex\spec>git config --g
   ct = commit
   br = branch
   co = checkout
-	
 
-	
-	
+
+
+
+9- Encontre una carpeta en un subdirectorio del proyecto android que no subir al repositorio con .git add lo pude subir usando la siguiente linea:
+	~$ git add -f  FundamentalesAndroid/gen
+	~$ git ct -m "Cargo el archivo de gen FundamentalesAndroid\gen"
+
 
 git clone git@github.com:iarielduarte/FrameworkAutomationJava.git
-
-
-
-
-		
