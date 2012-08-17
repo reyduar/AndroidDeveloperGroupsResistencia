@@ -1,0 +1,117 @@
+Refencias en Español: http://www.todopocketpc.com/showthread.php/218875-Programaci%C3%B3n-en-Android-Recursos-en-Espa%C3%B1ol
+Autor: Ariel Duarte
+Fecha: 28/07/2012
+------------------------------------------
+ANDROID VIEW
+------------------------------------------
+ViewGroup : Son un tipo especial de views que nos sirven para diseñar a la apariencia y la secuencia de las distintas
+            view que formen nuestra interface de usuario, se trata de una clase abstracta de android y soporta las siguientes
+            view groups:
+1º LinearLayout		--> Alinea a sus hijos con una orientacion vertical o orizontal
+2º AbsoluteLayout	--> No habilita para especificar la localizacion exacta de los hijos que va contener
+3º TableLayout		--> Permite agrupar vistas en filas y columnas
+4º RelativeLayout	--> Permite especificar como las vistas hijas como se van a posicionar relativas unas a otras
+5º FrameLayout		--> Es un contenedor en pantalla para mostrar una unica view 
+6º ScrollView		--> Habilita a los usuarios para hacer scroll
+
+{ Atributos comunes usados en Views y ViewGroups }
+
+Atributos 			Descripciones
+.layout_width     	-->	Specifies the width of the View or ViewGroup
+.layout_height  	-->	Specifies the height of the View or ViewGroup
+.layout_marginTop 	-->	Specifies extra space on the top side of the View or ViewGroup
+.layout_marginBottom   	-->	Specifies extra space on the bottom side of the View or ViewGroup
+.layout_maginLeft   	-->	Specifies extra space on the left side of the View or ViewGroup
+.layout_maginRight   	-->	Specifies extra space on the right side of the View or ViewGroup
+.layout_gravity   	-->	Specifies how child Views positioned
+.layout_weight   	-->	Specifies how much of the extra space in the layout should be allocated to the view
+.layout_x	   	-->	Specifies the x-coordinate of the View or ViewGroup
+.layout_y  	 	-->	Specifies the y-coordinate of the View or ViewGroup
+
+
+
+Constantes
+.fill_parent	--> ancho o alto de la pantalla
+.wrap_parent	--> ancho o alto de su contenido
+
+{ UNIDADES DE MEDIDAS PARA IU ANDROID }
+.dp	--> Density-independent pixel. 160dp es equivalente a una pulgada de tamaño fisico de la pantalla.
+	    Esta es la unidad de medida recomendada cuando especificamos la dimension de vistas en un "layout"
+	    Podemos especificarlo como "dp" o "dip" cuando nos referimos a una density-independent pixel.
+
+.sp	--> Scale-independent pixel. Es similar a dp y es recomendado para especificar tamaños de fuente.
+
+.pt	--> Point. Un point es definido como 1/72 de una pulgada, basada en el tamaño fisico de la pantalla.
+
+.px	--> Pixel. Correspondiente a los pixeles actuales en la pantalla. No es recomendable usar esta unidad en
+	    en Android, ya que la UI no se podra renderizar correctamente en dispositivos con diferentes tamaños de
+	    pantalla.
+
+
+
+.Atributos de RelativeLayout
+
+--> layout_alignParentTop
+--> layout_alignParentLeft
+--> layout_alignLeft
+--> layout_alignRight
+--> layout_below
+--> layout_centerHorizontal
+
+
+
+
+{ Eventos de las Views }
+
+.Localizacion de las view: Todas las vistas(view) se crean cuando tiene lugar el evento onCreate() por lo tanto para localzarlas
+ una vez creadas lo hariamos con:
+	findViewById(R.id.btnAbrir);
+.Evento: lo que deber hacer la vista cuando tiene lugar el evento y para eso usaremos el evento:
+	setOnClickListener(new View.OnClickListener() ; es el encargado de registrar la respuesta 
+
+
+{ Picker Views y List Views }
+
+
+--> View ProgressBar
+
+
+--> View AutocompleteTextView
+
+
+--> View Picker Views
+	.TimePicker: nos habilita para seleccionar un momento del dia bien modo 24hs. o am/pm
+	.DatePicker
+
+
+
+--> Tipos de List Views
+	.ListView
+	.SpinnerView
+
+{ Views para mostrar imagenes, menus y webs }
+
+1º Como usar las View Gallery, ImageSwitcher, GrindView e ImageView para mostrar imagenes.
+	.Gallery: es una view que nos muestra imagenes centradas y con un scroll orizontal.
+	.ImageView: es una view que permite visualizar la imagen a mayor tamaño
+	.BaseAdapter : nos permite enlazar la view gallery con las view que tienen que ir apareciendo en la Image View
+	.ImageSwitcher : Para aplicar una transicion mejora en la forma como aparece las imagnes de la galleria
+		- ViewFactory: Es la encargada de crear la view para que sean usadas por las view ImageSwitcher 
+	.GrindView : muetras todas la imagenes como en forma de grilla
+
+2º Como mostrar Menús de opciones y Menus Contextuales.
+	.OptionsMenu: Se activan presionando el boton menu del telefono
+	.ContextMenu: se aplica sobre una una view que muestra un list correspondiente a una switch que lo dispara que podria se un boton
+3º Como mostrar la hora usando las views AnalogClock y DigitalClock.
+	.AnalogClock : muestra un reloj analogico con dos manillas y muestran la hora del  telefono
+	.DigitalClock: 
+4º Como mostrar contenido Web usando la WebView.
+
+
+
+
+
+
+
+
+

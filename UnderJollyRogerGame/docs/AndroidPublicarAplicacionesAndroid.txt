@@ -1,0 +1,105 @@
+Refencias en Español: http://www.todopocketpc.com/showthread.php/218875-Programaci%C3%B3n-en-Android-Recursos-en-Espa%C3%B1ol
+Autor: Ariel Duarte
+Fecha: 28/07/2012
+------------------------------------------
+PUBLICAR LAS APLICACIONES EN ANDROID
+------------------------------------------
+1° Preparar nuestras aplicaciones para publicar.
+2° Exportarlas como archivo apk.
+3° Como firmalas con un certificado digital propio nuevo.
+4° Como distribuirlas. Android Market.
+
+
+
+Pasos para publicar las aplicaciones con Android :
+1 - Exportar aplicaciones como un archivo .apk
+2 - Generar nuestro propio certificado digital y firmar aplicacion.
+3 - Publicar la aplicacion firmada.
+4 - Usar el Android Market.
+
+
+
+
+{ Version Code y Version Name }
+
+Esto se encuntra en el Android Manifest.xml
+
+.Atributo Version Code: 
+Lo que representa es el numero de version de nuestra aplicacion y en cada revision que agamos de la app tenemos que incrementar este valor en 1++, el cual
+nos va a permitir programaticamente poder diferenciar las nuevas versiones de las anteriores. Ademas este atributo es el que usa el android Market
+para determinar si hay una nueva version que este disponible de la aplicacion.
+
+.Atributo Version Name: 
+Contiene informacion de la version que va a ser visible para los usuarios, tiene que contener valores en el formato <mayor>.<menor>.<punto> (1.0.0)
+Si llevamos a cabo una modificacion mayor teneomos que modificar el primero de los digitos, para pequeñas actualizaciones tenemos que incrementar el
+menor o incremenetar el punto que es el ultimo numero.
+
+ android:versionCode="1" android:versionName="1.0.0" >
+
+
+Si el android necesita una especificacion minima de version donde tiene que correr nuestra aplicacion es el siguiente atributo:
+
+ <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="15" />
+
+
+
+
+{ Certificado y Firma Digital }
+
+Todas las aplicaciones android tienen que estar firmadas digitalmente antes de que puedan ser mostradas de un dispositivo o emulador
+a diferencia de  otras plataformas de dispositivos mobiles no necesitamos comprar certificados digitales de una autoridad certificada
+para poder firmarlas en su lugar podemos generar nustros propios certificados autofirmados y usarlos para poder firmar nuestras aplicaciones.
+
+Eclipse lleva a cabo nuestro proceso de firmas para poder probar nuestras aplicaciones en de depuracion. 
+Podemos verificarlo como y donde se lleva a cabo esta keystore:
+	Window --> preference -->Android -->Build donde en Default debug keystore : indica la ruta del keystore que esta utilizando (debug.keystore)
+
+Para poder crear aplicacion tenemos que publicarla con nuestro propio certificado, no sirve este certificado de depuracion "debug.keystore"
+
+Generar la Firma Digital
+-------------------------
+Podemos generar manualmente nuestros propios certificados usando la herramienta Keytool.exe que se encuentra en el bin del SDK de Java.
+Pero este metodo no nos sirve para nada, porque Eclipse nos ofrece un Wizard para realiar esta operacion.
+ Esto es asi se selecciona el proyecto Android:
+	File --> Export --> Dialogo - Android --> Export Android Application.
+	Aparece un Wizard que nos pide datos y rutas de nuestro proyecto para poder generar la firma digital 
+	1° Pide la ruta donde queremos alojar el .apk
+	2° Key Creation:
+		Alias: 
+		Password:
+		Confirm:
+		Validaty (year): se puede poner entre 1 - 100 Recomendado (50)
+		First and Last Name:
+		Organizational Unit:
+		Organization:
+		City or Locality:	
+		State or Province:
+		Contry Code XX:
+	3° Pide una ultima ruta donde va alojarse el apk
+
+Para poder probarlo en el YouWave se coloca el .apk en el siguiente directorio
+	usuario --> youwave --> android apps
+
+
+
+
+{ Publicar en el Android Market }
+
+Tendriamos que tener una cuenta en Android Market como desarrollador
+	URL: http://market.android.com/publish/Home
+	Se paga una unica cuota de 25.00 US$ y ya puedes subir todas la aplicaciones que se hayan creado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

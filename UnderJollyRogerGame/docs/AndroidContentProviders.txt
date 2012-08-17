@@ -1,0 +1,181 @@
+Refencias en Español: http://www.todopocketpc.com/showthread.php/218875-Programaci%C3%B3n-en-Android-Recursos-en-Espa%C3%B1ol
+Autor: Ariel Duarte
+Fecha: 01/08/2012
+------------------------------------------
+ANDROID CONTENT PROVIDER 
+------------------------------------------
+
+Para compatir datos entre paquetes. Se comporta como una base de datos por lo tanto podemos:
+. Hacer consultas
+	usamos las URI: Identificador Universal de Recursos <prefijo_estandar>://<autoridad>/<ruta_datos>/<id>
+	- prefijo_estandar: Para Content Providers es siempre "content://"
+	- autoridad: Se especifica el nombre del Content Providers "contacts"
+	- ruta_datos: Tipo de datos "people"
+	- id: Registro concreto "2"
+	
+	Lista de Ejemplo de URIs BUILT-IN
+	------------------------------------
+	content://contacts/people/2 		--> Devuelve el contacto con la Id 2 de la agenda.
+	content://media/external/images 	--> Devuelve una lista de todas las imagenes internas del dispositivo.
+	content://media/external/images 	--> Devuelve una lista de todas las imagenes almacenadas en el almacenamiento externas del dispositivo.
+	content://call_log/calls 		--> Devuelve una lista de todas llamadas registradas en el Call Log.
+	content://browser/bookmarks 		--> Devuelve una lista de marcadores almacenados en navegador.
+	
+	.Uri: Define la Query Uri para realizar la consulta para un content provider
+		Uri allContacts = Uri.parse("content://contacts/people"); --> Definicion de Uri que nos devuelve todos los contactos
+              
+	      Existen otras formas para definir Uris ya predefinidas en android:
+		Uri allContacts = ContactsContract.Contacts.CONTENT_URI;  --> Definicion de Uri con constantes, tambien nos devuelve todos los contactos
+
+	Constantes Utilizables		
+	-----------------------
+	-> Browser.BOOKMARKS_URI
+	-> Browser.SEARCHES_URI
+	-> CallLog.CONTENT_URI
+	-> MediaStore.Images.Media.INTERNAL_CONTENT_URI
+	-> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+	-> Settings.CONTENT_URI
+	
+		Si queremos identificar un contacto especifico le pasamos la Id asi:
+			Uri allContacts = Uri.parse("content://contacts/people/1");
+		
+		Tambien para identificar un contacto especifico utilizando la constante CONTENT_URI hacemos lo siguiente:
+			1° Importamos import android.content.ContentUris;
+		        2° Utilizamos para ello .withAppendedId asi: 
+				Uri allContacts = ContentUris.withAppendedId(ContactsContract.Contacts.CONTENT_URI, 1);		
+			
+	
+	      
+	      
+
+	.Cursor : Es una interface que no permite acceder a un conjunto de resultados devuelto por una consulta a una Base de Datos o a un Content Provider.
+		  Por lo tanto estos cursores son los que no permiten manejar la informacion que nos devuelve una consulta.
+
+	.managedQuery(Uri): El manager Cursor lo que hace  es automatizar este proceso de funcionamiento de un Cursor, maneja todo el trabajo, el mismo se descarga
+                       cuando la aplicacion se detiene y se vuelve a llamar asi mismo cuando la aplicacion se reinicia. Este manager cursor lo creamos mediante 
+                       la llamada al metodo de la clase Activity.managedQuery() para esto tambien podemos utilizar el metodo ContentResolver.query() ambos metodos
+                       tienen exactamente el mismo numero de argumentos y ambos nos devulven un objeto Cursor()
+		       El primero de los argumentos que tenemos que pasarle es la Uri la cual nos permite acceder a la informacion que queremos consultar
+
+			
+	.ContactsContract
+
+	.SimpleCursorAdapter
+
+	En el Archivo Manifiest debemos incluir la siguiente configuracion:
+		<uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+	
+{ PROYECCIONES }
+
+Es el segundo parametro del metodo managedQuery(), el cual controla cuantas columnas son devueltas por la consulta, debemos especificar un array de las
+columnas que queremos que no devuelva por ejemplo:
+
+			String[] projection = new String[]
+			{ContactsContract.Contacts._ID,			-> Campos a devolver
+			ContactsContract.Contacts.DISPLAY_NAME,		-> Campos a devolver
+			ContactsContract.Contacts.HAS_PHONE_NUMBER};	-> Campos a devolver
+
+			Cursor c = managedQuery(allContacts, projection, null, null, null);
+Filtrando los datos utilizamos el 3er y 4to parametro y le especificamos la columna (ContactsContract.Contacts.DISPLAY_NAME) que se quiere filtrar y su valor de filtro que %Lee
+para ordenar tenemos la ultima 5to parametro como vemos el ejemplo:
+
+  Cursor c = managedQuery(allContacts, projection, ContactsContract.Contacts.DISPLAY_NAME + " LIKE ?", new String[] {"%Lee"} ,ContactsContract.Contacts.DISPLAY_NAME + " ASC");
+
+
+android.R.layout.simple_list_item_2,
+
+
+	
+. Editar Contenido
+. Añadir contenido
+. Borrar Contendio
+
+A diferencia de una Base de Datos los Content Provider pueden tener diferentes formas de almacenar sus datos; pueden estar almacenados en 
+archivos o incluso en una red.
+
+Algunos Content Provider de los mas importantes son los siguientes:
+- BROWSER	: que almacena los datos como marcadores del navegador o historial de navegacion
+- CALLLOG	: que almacena datos como las llamadas perdidas los detalles de las llamadas, etc.
+- CONTACTS	: que almacena los detalles de los contactos
+- MEDIASTORE 	: que almacena archivos multimedia como puede ser audio o video
+- SETTING	: que almacena las configuraciones y preferencias del dispositivo
+
+
+{ ¿QUE SON? }
+
+
+
+{ BUILT-IN }
+
+
+{ CREAR CONTENT PROVIDER }
+
+La Clase ContentProvider es una clase abstracta que nos permite crear nuestros propios Content Provider.
+
+Metodos que debemos sobrescribir en ContentProvider son:
+
+
+-> onCreate(): Llamado cuando el provider es creado la primera vez.
+-> getType(): Devuelve tipo MIME de los datos del URI de la ruta que se le ha indicado.
+-> query(): Recibe la peticion de un cliente. El resultado es devuelto como un Cursor.
+-> insert(): Inserta un nuevo registro en el Content Provider
+-> delete(): Borra un registro en el Content Provider
+-> update(): Actualiza un registro en el Content Provider
+
+
+
+Nota: Podemos decir que con el Content Provider somo libres de elejir la forma de almacenamiento de datos se puede hacer:
+- Con un sistema tradicional de archivos.
+- Se puede almacenar como XML;
+- Se puede almacenar como una Base de Datos.
+- Incluso se puede hacer atravez de Servicios Web.
+
+
+La Clase UriMacher(): Es el encargado de: 
+	1º Analizar Uris pasado al Content Prvider
+	2º Sirve para emparejar Uris
+
+	Uri CONTENT_URI = Uri.parse("content://" +PROVIDER_NAME + "/libros");
+
+En en el Archivo Manifiest se agrega el provider que creamos y la autoridad correspodiente
+  <provider android:name="LibrosProvider" android:authorities="com.videotutoriales.provider.Libros" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{ USAR CONTENT PROVIDER }

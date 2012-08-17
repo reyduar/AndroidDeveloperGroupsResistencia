@@ -1,0 +1,309 @@
+Refencias en Español: http://www.todopocketpc.com/showthread.php/218875-Programaci%C3%B3n-en-Android-Recursos-en-Espa%C3%B1ol
+Autor: Ariel Duarte
+Fecha: 28/07/2012
+------------------------------------------
+ANDROID PERSISTENCIA DE DATOS Y BASE DE DATOS CON SQLITE
+------------------------------------------
+Tipos de Persiscia en Android:
+1° SharedPreference : Sirve para salvar pequeños datos emparejados en clave valor.
+2° Java Input/Output : Es el uso de archivos tradicionales con JavaI/O para leer y escribir tanto archivos internos como externos
+3° Base de Datos SQLite : Sistema de manejo de Base de Datos Relacionales con el soporte SQlite con el que cuenta android.
+
+{ PERSISTENCIA CON SQLITE}
+
+- La Base de Datos que creemos para una aplicacion solo seran accesible para esa aplicacion.
+- Todas las Base de Datos que creemos van a ir almacenados en el directorio del telefono o el emulador
+	/data/data/nombre_paquete/databases
+- Una practica para trabajar con Bases de Datos SQLite es crear una Clase Helper para encapsular todas las complejidades de acceder a los datos
+  para que todo sea mas transparente y reutilizable para cualquier otro caso que necesitemos crear y utilizar Bases de Datos.
+
+1° SQLiteOpenHelper : Es una clase helper que sirve tanto para el manejo de Base de Datos en Android como el manejo de versiones en ella tenemos dos metodos importantes:
+	.onCreate(SQLiteDatabase db)
+	 Va a ser el encargado de crear la Base de Datos  si no existe con el metodo execSQL(String comandoSQL) en el que le pasamos como parametro 
+         un String con la creacion de la base de datos. 
+	
+	.onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+	 Es llamada cuando la Base de Datos necesita ser actualizada, generalmente se ejecuta este metodo cuado se percata de existe una nueva version de la 
+         base de datos, entonce debemos borrar la Base de Datos y volver a llamar al metodo onCreate().
+	
+   Definimos ademas los distintos metodos para el mantimiento de la Base de Datos:
+	1. Abrir la Base de Datos: se utiliza el metodo .getWritableDatabase()
+		db = DBHelper.getWritableDatabase();
+
+	2. Cerrar la Base de Datos: se utliza el metodo .close()
+		DBHelper.close();
+
+	3. Insertar datos se realiza con la clase ContetValues()
+	   .ContetValues(): No sirve para almecenar datos clave valor en un buffer
+		ContentValues valoresIniciales = new ContentValues();
+
+	   .put(campo, valor) es el encargado de almacenar los valores de diferentes tipos de datos 
+
+
+	   .insert(tabla, null, valores) permite insertar los datos en la base de datos
+           	ContentValues valoresIniciales = new ContentValues();
+		valoresIniciales.put(KEY_NOMBRE, nombre);
+		valoresIniciales.put(KEY_EMAIL, email);
+		db.insert(TABLA_BASEDATOS, null, valoresIniciales);
+
+	4. Recuperar los datos, para esto Android utiliza la interface Cursor() la actua como punteros
+	   .Cursor() : podemos considerar como un puntero al conjunto de resultados que devuelve una consulta a la Base de Datos
+		        Cursor cursorDatos;
+ 
+	   .SQLiteDatabase.query(tabla, columnas, selection, selectionArgs, groupBy, having, orderBy): con este metodo recuperamos los datos
+			cursorDatos = appBdSQLite.query(tablaPersonas, columnas, null, null, null, null, null); 
+
+	   .getColumnIndex("nombre"): con este metodo mostramos el dato de un campo
+			cursorDatos.getColumnIndex("nombre");
+	
+	   .query() : Practicamente prepara el conjunto de registros
+		Es ejemplo es para tener encuenta que se puede obtener un solo registro filtrando una idFila
+			Cursor mCursor = db.query(TABLA_BASEDATOS, new String[] { KEY_IDFILA,KEY_NOMBRE, KEY_EMAIL }, KEY_IDFILA + "=" + idFila, null, null,null, null);
+	
+	  Los metodos que se implementan para recorrer el conjunto de registros proporcionado por el cursor son los siguientes:
+	  .moveToFirst() 	--> Permite mover al primero registro
+	  .moveToNext()		--> Permite mover al siguiente registro
+	  .moveToPrevious()	--> Permite mover al anterior registro
+	  .moveToLast()	        --> Permite mover al ultimo registro
+    		
+		
+	5. Borramos datos de SQLite con el metodo delete()
+		db.delete(TABLA_BASEDATOS, KEY_IDFILA + "=" + idFila, null);
+
+	6. Actualizamos los datos con el metodo update() nuevamente tendriamos que llamar a la clase ContetValues() y a realizar las actualizaciones con el metodo put()
+
+		ContentValues args = new ContentValues();
+		args.put(KEY_NOMBRE, nombreFila);
+		args.put(KEY_EMAIL, emailFila);
+		db.update(TABLA_BASEDATOS, args, KEY_IDFILA + "=" + idFila, null);
+
+
+Otras Forma rapida de crear una Base de Datos sin necesidad de usar SQLiteOpenHelper seria la siguiente:
+1. Definimos el objeto como Base de Datos con la clase SQLiteDatabase 
+	private SQLiteDatabase BdSQLite = null;
+
+2. Creamos o abrimos la Base de Datos con el metodo openOrCreateDatabase() y creamos la tabla con el metodo execSQL()
+	BdSQLite = openOrCreateDatabase(nombreBD, MODE_WORLD_WRITEABLE, null);
+        BdSQLite.execSQL("CREATE TABLE if not exists "  
+			+ " PERSONAS (codigo INTEGER PRIMARY KEY autoincrement, "  
+			+ " nombre TEXT NOT NULL, telefono TEXT NOT NULL unique, " 
+			+ " email TEXT NOT NULL unique);");
+3. Cerramos la Base de Datos con el metodo close()
+	BdSQLite.close(); 
+
+4. Creamos un cursor para visualizar los datos con la interfaz Cursor()
+	Cursor cursorDatos; 
+	cursorDatos = BdSQLite.query(tablaPersonas, {"nombre","telefono","email"};, null, null, null, null, null); 
+	
+	Por ejemplo contamos los registros :
+	int contadorRegistros = cursorDatos.getCount();
+	
+	Por ejemplo nos movemos al primer registro de:
+	cursorDatos.moveToFirst();
+	
+	Por ejemplo mostramos los datos en unos TextView definidos :
+	tvNombre.setText(cursorDatos.getString(cursorDatos.getColumnIndex("nombre")));
+    	tvTelefono.setText(cursorDatos.getString(cursorDatos.getColumnIndex("telefono")));
+    	tvEmail.setText(cursorDatos.getString(cursorDatos.getColumnIndex("email")));
+
+5. Podemos Guardar los datos sin necesidad un ContentValue() simplemente con el tipico comando SQL insert into :
+	String sqlComando = "INSERT INTO PERSONAS (nombre, telefono, email) VALUES ('"+cNombre+"','"cTelefono+"','"cEmail+"')";
+	BdSQLite.execSQL(sqlComando);
+
+Nota : siempre es recomendable separar las operaciones en metodos y para cada evento que tenga lugar usar las estructura try..catch con la excepcion SQLException.
+		asi:
+			try {
+				BdSQLite.execSQL(CREAR_BASEDATOS);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+	
+
+
+
+
+
+
+{ PERSISTENCIA CON SharedPreferences }
+
+Son UTiles para guardar configuraciones de preferencias como tamaño de fuente, color de fuente, etc. atravez del formato clave/valor
+y que seran guardados automaticamente en un archivo XML.
+
+	.getSharedPreferences(String name, Int mode) Permite almacenar y recuperar los datos, pide dos parametros de entrada
+		
+
+		//-- Se definen el objeto y se le pasa los parametros nombre de la preferencia y el modo	
+		SharedPreferences prefs = getSharedPreferences("MiPreferencia", MODE_PRIVATE);
+	.Nombre: Seria el nombre del archivo donde queremos guardar esas preferencias el cual aparecera con extension XML. 
+
+	.Modo puden ser:
+		MODE_PRIVATE          --> Los datos seran solo accesibles para la aplicacion en concreto que los usa. 
+		MODE_WORLD_READABLE   --> Pueden ser accedido desde cualquier aplicacion.
+		MODE_WORLD_WRITEABLE  --> Cuando puede ser escrito por cualquier aplicacion. 
+		MODE_MULTI_PROCESS    --> Cuando una aplicacion que tenga varios hilos varios procesos  que se puedan usar en la aplicacion siempre que se utilice el mismo SharedPreferences
+	
+
+	
+	.SharedPreferences.Editor
+	 Editor es una interface que nos permite salvar pares clave/Valor y es la que guarda en ese archivo.xml y para eso usa 
+ 	 algunos metodos dependiendo del valor que queramos guardar :
+	 - putBoolean (Clave, valor)
+	 - putFloat (Clave, valor)
+	 - putInt (Clave, valor)
+	 - putLong (Clave, valor)
+	 - putString (Clave, valor)
+
+		SharedPreferences.Editor editor = prefs.edit();
+		
+		// ---Salvar los valores en la view EditText a preferencias--- //
+		editor.putFloat(TAM_FUENTE_KEY, editText.getTextSize());
+		editor.putString(VALOR_TEXTO_KEY, editText.getText().toString());
+
+		1°Las constantes TAM_FUENTE_KEY, VALOR_TEXTO_KEY son nombre de claves definidas para indentificar el tipo de preferencia en el archivo guardado
+		2°editText es un campo de texto, y getTextSize() recupera el tamaño y getText().toString() recupera el texto 
+	
+	.editor.commit
+         Las preferencias se guardan con commit
+		// ---Guardar las preferencias--- //
+				editor.commit();
+
+	.Volver a cargar el objeto SharedPreferences guardardado
+	 
+	// --- Cargamos el objeto SharedPreferences --- //
+		SharedPreferences prefs = getSharedPreferences(nombrePref, MODE_PRIVATE);
+	
+	// --- Configurar el tamaño de fuente de TextView a los valores Salvados previamente ---//
+		float fontSize = prefs.getFloat(TAM_FUENTE_KEY, 12);
+
+	.Como ver los archivos de configuraciones que se guardan automaticamente
+	
+	1° Arquitectura DDMS
+	2° Carpeta .data -->.data -->package de nuestra app-->.shared_prefs-->MiPref.xml
+
+
+
+	.getPreferences
+	 Con este metodo no requiere darle un nombre al archivo de configuracion pero la configuracion no se comparte entre activities
+	 La informacion es guardada en un archivo llamado con el mismo nombre de la clase que lo creo en siguiente directorio:
+
+	Carpeta .data -->.data -->package de nuestra app-->.shared_prefs-->nombre_archivo.xml
+
+
+
+
+
+
+
+
+
+
+{ JAVA I/O }
+
+http://www.javaya.com.ar/androidya/detalleconcepto.php?codigo=143&inicio=
+
+Lectura y escritura del archivo de forma interna del telefono.
+
+El almacenamiento con java I/O se pueden hacer de forma interna o externa en la tarjeta SD
+Usamos las siguientes Clases:
+
+1° FileOutputStream : Para salvar texto 
+	 Un flujo de salida que escribe bytes en un archivo. Si el archivo de salida existe, puede ser sustituido o añadirse. Si no existe, un nuevo archivo será creado.
+   
+
+	.openFileOutput(String nombre, int modo) : Se usa para poder abrir un archivo para escribir en el.
+	 
+         Los parametros:
+	 - nombre: el nombre del archivo que se quiere abrir
+	 - modo: modo para saber la accesibilidad ellos son:
+	  	MODE_PRIVATE		--> modo privado
+	 	MODE_APPEND		--> modo agregar mas contendio a un archivo que ya existe
+	  	MODE_WORLD_READABLE	--> modeo para que se legible desde cualquier aplicacion
+	  	MODE_WORLD_WRITEABLE	--> modeo para que se escribible desde cualquier aplicacion
+           	
+		FileOutputStream fOut = openFileOutput("archivotexto.txt", MODE_WORLD_READABLE);
+
+2° OutputStreamWriter: Para convertir un string caracter en string byte y al cual tenemos que pasarle una instancia del objeto FileOutputStream 
+		Una clase para convertir una secuencia de caracteres en un flujo de bytes
+		
+		OutputStreamWriter osw = new OutputStreamWriter(fOut);
+
+	Metodos para escribir el string al archivo
+	osw.write(str);	--> Se utiliza para escribir el string al archivo
+	osw.flush();	--> Para asegurarnos que todos los bytes son escritos al archivo utilizamos el metodo flush
+	osw.close();	--> Se utiliza el metodo close para cerrar el archivo
+
+	Nota:
+	Todo este codigo se utiliza con una estrucrura Try..catch con una excepcion IOException
+	try {
+		////----fuente----/////
+	} catch (IOException ieo) {
+		ieo.printStackTrace();
+	}
+
+3° FileInputStream : Leer el contenido que se encuentra cargado en el archivo
+	Un flujo de entrada que lee bytes desde un archivo.
+	
+	.openFileInput(String fileName) : Permite abrir el archivo con extension txt
+
+        	FileInputStream fIn = openFileInput("archivotexto.txt");
+
+4°InputStreamReader : Una clase para convertir una secuencia de bytes en una secuencia de caracteres
+	
+  Metodo
+    .read() : permite leer todo un bloque
+    .readLine() : permite la lectura linea a linea
+
+	InputStreamReader isr = new InputStreamReader(fIn);
+	
+	char[] inputBuffer = new char[LEER_TAM_BLOQUE];
+	String s = "";
+	int charRead;
+	while ((charRead = isr.read(inputBuffer))>0) {
+		// --Convetir los chars a un string --//
+		String readString = String.copyValueOf(inputBuffer,0,charRead);
+		s += readString;
+		inputBuffer = new char[LEER_TAM_BLOQUE];
+	}
+
+	
+	editTextIO.setText(s);
+
+
+Con almacenamiento externo cambiamos alguno parametros y usamos nuevos metodos: 
+
+Lo primero que hacemos es poner es poner la configuracion correspondiente en el AndroidManifest.xml
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+La clave del cambio para el codigo java para almacenar el archivo de forma externa es usar el metodo 
+	.getExternalStorageDirectory() : que nos devuelve la ruta completa al almacenamiento externo : 
+		/sdcard/mnt/sdcard --> para un dispositivo real
+		/sdcard/mdt/sdcard --> para un emulador
+
+			File tarjetaSd = Environment.getExternalStorageDirectory();
+
+	.getAbsolutePath() : por lo tanto usamos este metodo para indicar la ruta del archivo ha ser almacenado 
+	
+			File directorio = new File(tarjetaSd.getAbsolutePath()+"/MisArchivos");
+					
+
+	mkdir() : este metodo permitira crear un archivo en el directorio indicado
+
+			directorio.mkdir();
+
+	.File(String path) : en este caso estamos usando la Clase File porque usamos un direcctorio definido por nosotros mismos 
+		El parámetro path indica el camino hacia el directorio donde se encuentra el archivo, y name indica el nombre del archivo.
+					File archivo = new File(directorio, "archivotexto.txt");
+		
+		Lo demas continua igual como lo explicamos anteriormente:
+					FileOutputStream fOut = new FileOutputStream(archivo);
+					OutputStreamWriter osw = new OutputStreamWriter(fOut);
+					// --Escribir el string al archivo --//
+					osw.write(str);
+					osw.flush();
+					osw.close();
+
+
+
+
+

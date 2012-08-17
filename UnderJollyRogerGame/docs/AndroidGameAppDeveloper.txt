@@ -1,0 +1,355 @@
+Refencias en Español: http://www.todopocketpc.com/showthread.php/218875-Programaci%C3%B3n-en-Android-Recursos-en-Espa%C3%B1ol
+Autor: Ariel Duarte
+Fecha: 11/07/2012
+------------------------------------------
+ANDROID PARA DESARROLLADORES DE JUEGOS Y/O OTRAS APLICACIONES
+------------------------------------------
+otakus 
+
+¿Que necesitamos?
+--- Necsitamos un conjunto limitado de Apis
+
+
+{ PARTES PRINCIPALES PARA EL DESARROLLO DE NUESTRO JUEGO }
+
+1. Administrador de Ventanas
+2. Inputs del Usuario (Control de usuario)
+3. Archivo I/O
+4. Graficos
+5. Audio
+
+
+{ EL ARCHIVO MANIFIESTO manifest file }
+Usado por Android para saber como esta hecha nuestra aplicacion.
+El manifest file es donde debemos definir los componentes de nuestra aplicación y como reaccionan.
+
+
+{ COMPONENTES ESENCIALES QUE SIEMPRE ESTAN PRESENTE EN NUESTRAS APP }
+
+1.ACTIVITIES
+  Componentes visibles, con una interfaz de usuario y que serviran para interactuar con la aplicacion.
+
+2.SERVICES
+  Procesos en segundo plano, no visibles. Monitorean al resto de componentes y actividades de la aplicación.
+  por ejemplo son los encargado de monitorear un chat para cuando hay una entrada en el mismo, no tiene una interfaz
+  de usuario visible.
+
+3.INTENTS
+  Encargados de las comunicaciones internas y externas de la aplicacion. Inician componentes, solicitan acciones..
+  Por ejemplo son los que notifican que se haya conectado un clabe USB, tambien son usados para iniciar otros
+  otros componentes de nuestra app, pueden lanzar activities o ejecutas otras aplicaciones como la camara, etc.
+
+4.BROADCASTRECEIVERS
+  Reaccionan a intents concretos y pueden ejecutar acciones.
+
+Nota: Existen otros varios componentes en Android, pero estos son el nucleo de toda aplicacion 
+
+{ PUNTO INICIAL DEL DESARROLLO "manifest file" }
+
+Partes relevantes de un archivo manifest :
+
+1. Version de nuestra aplicacion  para Android Market.
+2. Version de Android adminitidas.
+3. Perfiles de Hardware requeridos.
+4. Permisos para usar componentes especificos.
+
+ESTRUCTURA XML attributes:
+<action>
+<activity>
+<activity-alias>
+<application>
+<category>
+<data>
+<grant-uri-permission>
+<instrumentation>
+<intent-filter>
+<manifest>
+<meta-data>
+<permission>
+<permission-group>
+<permission-tree>
+<provider>
+<receiver>
+<service>
+<supports-screens>
+<uses-configuration>
+<uses-feature>
+<uses-library>
+<uses-permission>
+<uses-sdk> 
+
+
+{ REQUISITOS PARA UNA APLICACION ANDROID }
+1. SDKversiones: Debe soportar Android 1.5 y superior.
+2. SDCARD: Debe instalarse en la tarjeta SD si es posible.
+3. DEBUGGEABLE: Debe ser depurable
+4. mainActivity: Debe tener una unica Activity principal.
+5. PERMISOS: Debe permitir acceder a SDcard y evitar bloqueos.
+
+
+{ TRABAJANDO CON LAS APIS DE ANDROID }
+
+{ CICLO DE VIDA DE LAS ACTIVITIES }
+
+Metodos principales:
+1. onCreate()
+	- Ventana
+	- Elemento UI
+	- Inputs
+2. onResumen()
+	- Iniciamos o reiniciamos hilo loop Main
+3. onPause()
+	- Detemos el hilo loop Main
+	- Si isFinishing() devuelve .True. Salvamos al disco
+
+
+{ DISPOSITIVOS DE ENTRADA - OBTENER EVENTOS }
+1. Touchscreen
+	- View.onTouchListener
+2. Keyboard
+	- onKeyListener
+3. Acelerometro
+	- SensorEventListener
+		.onSensorChanged()
+		.onAccuracyChanged()
+
+
+{ FALTA EL AUDIO }	
+-sdcard "sdcard.img"
+
+{ TRABAJOS CON GRAFICOS 3D y 2D}	
+  .Siempre con Wake Locks y Pantalla completa
+	- se usa siempre <uses-permission android.permission.WAKE_LOCK> para que la pantalla se quede desactivada.
+	- Para crear una instancia de WakeLock tenemos que utilizar PowerManager
+	- Se usa para pantalla completa WindowManager.LayoutParams.FLAG_FULLSCREEN y se desaparecer la barra de titulos con Window.FEATURE_NO_TITLE
+
+  .Hacer Renderizados
+	- ¿Dibujar el hilo de la UI?
+	- Debemos crear una clase que deriva del View y sobrescribir el metodo onDraw()
+	- Obtener una instancia de la clase Canvas y pasarsela al metodo OnDraw que necesitamos para redibujar la activity
+	- Para redibujar el rendeView se usa el metodo invalidate() eso hace que siempre lo este renderizando
+  .La clase Canvas
+	- Incluye a la libreria SKIA
+	- SKIA: ejecuta renderizaciones 2D en la CPU
+	- ¿Donde dibujar metodos Draw? : Instancia de bitmap
+  .Dibujar en el Canvas
+	- Obtener coordenadas (canvas.getWidth() y canvas.getHeight())
+	- Dibujar pixeles (Canvas.drawPoint(float x, float y, Paint paint))Paint se usa para el color
+	- Dibujar Lineas (Canvas.drawLine(float startX, float startY, float stopY, Paint paint))
+	- Dibujar rectangulos (Canvas.drawRect(float topleftX, float topleftY, float RightX, float bottomRightY, Paint paint)) setStyle : para el estilo de figura
+	- Dibujar circulos (Canvas.drawCircle(float centerX, float centerY, float radius, Paint paint))
+
+
+{ USO DE BITMAPS }
+  .Cargar y examinar bitmap
+	- BitmapFactory
+	
+
+
+
+{ DESARROLLO DE UN JUEGO }
+
+Posibles Nombre:
+* Under The Sail
+* Battle Heart
+* UnderJollyRoger
+
+Dimensiones Pantalla:
+Anchura: 11,29
+Altura: 16,93
+Resolucion: 72
+
+
+1. Determinar la mecanica del Core del juego.
+2. Esbozo de historia, principales caracteres, graficos y estilos de juego.
+3. Esbozo de pantallas del juego, transiciones entre ellas y disparadores
+
+	.Diseño del juego
+	 - Podemos elegir lapiz y papel 
+         - Podemos elejir un programa Ej. Balsamiq Mockups; permite determinar el diseño de un juego o aplicacion
+	 - Definimos los mecanismos del juego
+		1º El barco Jolly Roger avanza en la direccion en la que apunta su pro, seguido por su tripulacion que ira aumentando a medida que consiga victorias.
+		2º La victoria se consigue si el barco toca un tesoro, este desaparece, la puntuacion aumenta en 10 y un nuevo tesoro aparece en algun lugar del oceano no ocupada por los piratas. Tambien se añade un nuevo tripulante al final de la cola.
+		3º Si los botones de la derecha o izquierda son pulsados, el barco gira 90º grados en el sentido de las agujas del reloj (derecha) o contrarias a las agujas del reloj (izquierda).
+		4º Si el barco sale de los limites de la pantalla, vuelve a entrar por el lado opuesto de la misma.
+		5º Si el barco toca su tripulacion el juego se termina. Máxima puntuacion si barco y tripulacion ocupan toda la pantalla. Muestra la puntacion y Game Over.
+
+
+	.Partes Basicas
+	- Pantalla: es la parte basica para la organizacion del juego.Puede estar compuesta por multiples componentes y permite a los usuarios interactuar con el juego.
+	
+	.Framework a tener en cuenta
+	- Administrador de ventanas: encargado del control de crear ventanas y gestionar su funcionamiento.
+	- Input: Encargado de las lecturas en general
+	- File I/O: Permitira acceder a los diferentes tipos de archivos (musica, grficos, etc.) desde el assets.
+	- Graficos: Es el mas complejo por se el encargado de dibujar los graficos y mostrarlos en la pantalla.
+	- Audio: Es el encargado de ejecutar todo lo que se oiga en nuestro juego.
+	- Game Framework: va a enlazar todo lo anterior y nos provee con una base facil para escribir nuestros juegos.
+
+	.Hay empezar a crear las interfaces del juego a ser implementadas y la codificacion los pasos son:
+	1º Implementar las interfaces y clases.
+	2º Llevar a cabo la codificacion
+	
+
+
+
+1º Modulo de Archivos File I/O
+	.Para Lectura y escritura de archivos
+		- InputStream
+		- OutputStream
+	
+
+
+2º Modulo de Auidio e Input
+	.Requerimientos
+		- Modo de ejecutar archivos en Streaming.
+		- Modo de cargar audio desde la memoria.
+		- Modo de controlar el Audio en Streaming.
+		- Modo de controlar Audio cargado desde la memoria.
+	. Interfaces necesarias
+		- Audio
+		- Musica
+		- Sonido
+
+3º Modulo Input
+	.Tiene dos tareas principales:
+		- Introducir los eventos en sistema
+		- Registrar esos eventos (Estamos hablando que se llevan  a cabo por el jugador)
+	.Modo de tratar la informacion (eventos de usuarios)
+		- Polling (encuesta) : hace referencia a una operacion de consulta constante en busqueda del sincronismo de procesos (comprobaciones de eventos constantes).
+		- Event handler: Nos da una cronologia historia en orden de los eventos que han ocurrido desde la ultima comprobacion, se usa cuando el orden importa. Es tambien util para detectar cuando un dedo ha tocado la pantalla o en el momento en el cual fue levantado.
+
+	.Modo para interactuar en Android con los jugadores, los metodo input principales son:
+		- TouchScreen
+		- Keyboard/Trackball
+		- Acelerometro
+	
+	.Eventos TouchScreen
+		- Touch Down : cuando un dedo esta pulsando sonbre la pantalla
+		- Touch Drag : cuando un dedo esta atrastrando sobre la pantalla
+		- Touch Up: Cuando un dedo esta soltando la pantalla
+		
+	.Informacion que contiene TouchScreen:
+		- Posicion dentro del componente IU donde se ha tocado con el dedo.
+		- Puntero Index en aplicaciones multituouch
+	
+	.Eventos Keyboard:
+		- key Down: cuando la tecla es pulsada ()
+		- Key Up : Ocurren cuando la tecla es liberada
+
+	.Creamos una forma de eliminar las instancias que ya no se utilizan:
+		- Usamos el metodo Pool; que consiste en la reutilizacion de la instancia
+		- Fabricamos una clase generica factory 
+	
+	.Desarrollo de Handler:
+		- KeyBoardHandler, Derebera realizar varias tareas importantes:	
+			1° Enlazar con la View desde la que se recibira los eventos del teclado.
+			2° Almacenar el estado actual de las teclas y mantener la lista de instancias de evetos de teclas.
+			3° Sincronizar los dos hilos diferentes 
+
+
+
+4º Modulo Grafico
+
+	.Resumen del trabajo con graficos
+		1 - Cargar las imagenes desde el disco y almacenarlas en la memoria.
+		2 - Poder limpiar el framerbuffer con un color . Framerbuffer: representan cada uno de los pixeles de la pantalla
+		3 - Configurar cada pixel del framerbuffer como una localizacion especifica para un color especifico.
+		4 - Dibujar lineas y rectangulos en el framebuffer.
+		5 - Dibujar imagenes completas o parciales.
+		6 - Poder dibujar imagenes con o sin blending(sin mezcla). Nosotros la usaremos siempre con blending lo que no significa un gran consumo
+		    de recursos extras y nos va a simplificar mucho la creacion del codigo 
+
+        .GRAFICOS Y RESOLUCIONES DE PANTALLA }
+	  1º Se va dimensionar estaticamente la resolucion de la pantalla en 320 X 480 pixeles
+	  2º Deberan ser transformados las cordenadas desde sus sistema original a nuestro sistema basado en factores de escala con la siguiente formula:
+		.transformado touch X = real touch x * (pixeles objetivo en eje x / pixeles reales en el eje x)
+		.transformado touch Y = real touch y * (pixeles objetivo en eje y / pixeles reales en el eje y)
+	
+
+5º Modulo Juego
+	.Interfaces Juego necesitamos que haga: 
+		1º Configurar componentes Ventanas e IU. Conectarlos para que reciban eventos (hook y callbacks)
+		2º Iniciar el bucle principal
+		3º Hacer un seguimiento de la pantalla activa y hacer que se actualiace y muestre en cada iteracion (fotograma)
+		4º Transferir eventos de ventana de hilo IU al hilo loop principal.
+		5º Conseder acceso a los otros modulos del juego
+	.Clase abstracta Pantalla: Sera la encargada de poner en accion todas la modificaciones entre pantallas que van a tener lugar en el juego.
+
+
+6º Modulo desarrollo de la capa de Android
+	.Graficos y caracteristicas
+		1 - botones.png 128x192 (cada boton tiene un tamaño de 64x64px)
+		2 - logo.png 256x160
+		3 - fondo.png 320x480
+		4 - ayuda1.png 192x256 Titulo: BUSCA TESOROS
+		    ayuda2.png 192x256 Titulo: EL BARCO PIRATA GIRA A DERECHA E IZQUIERDA 
+		    ayuda3.png 192x256 Titulo: EL BARCO NO PUEDE TOCAR SU TRIPULACION
+		5 - menuprincipal.png 192x128 Opciones: JUGAR - PUNTUACIONES - AYUDA (42px de altura para cada letra)
+		6 - preparado.png 225x96 Opcion: ¿PREPARADO? (PULSA LA PANTALLA)
+		7 - menupausa.png 160x96 Opcion: REANUDAR - QUITAR
+		8 - finjuego.png 196x50 Titulo: FIN JUEGO
+		9 - numeros.png 210x32 Titulo: 0123456789. (cada digito tiene 20x32px)
+		10- tripulacion.png 32x32 Grafico: marinero pirata
+		11- barcoabajo.png 42x42 Grafico: barco apuntando hacia abajo
+		12- barcoizquierda.png 42x42 Grafico: barco apuntando hacia la izquierda
+		13- barcoderecha.png 42x42 Grafico: barco apuntando hacia la derecha
+		14- barcoarriba.png 42x42 Grafico: barco apuntando hacia arriba
+		15- botin1.png 32x32 Grafico: moneda
+		16- botin2.png 32x32 Grafico: cofre abierto
+		17- botin3.png 32x32 Grafico: cofre cerrado
+
+Nota: El Singleton Pattern es donde se encapsula todo en getter y setter
+
+
+
+		
+
+
+
+7º Modelo Vista y Controlador del Juego
+
+	.La clase JollyRoger debera hacer lo siguiente :
+		1º Almacenar el barco y la tripulacion
+		2º Saber como se esta desplazando el barco
+		3º Añadir nuevos tripulantes
+		4º Moverse por las celdas en la direccion que le indique
+
+ 	.La clase Mundo debera hacer lo siguiente :
+		1º Hacer un seguimiento del barco y su tripulacion
+		2º Colocar los botines en el oceano
+		3º Mover a Jolly Roger usando el "DeltaTime" hacer que se mueva a la siguiente celda cada medio segundo
+		4º Comprobar si el barco ha capturado un botin o ha capturado un tripilante
+		5º Hacer un seguimiento de la puntuacion
+		6º Incrementar la velocidad del barco tras capturar 10 botines
+		7º Hacer un seguimiento de si el barco ha sido undido
+
+ Nota :"DeltaTime" es lo consideramos como acciones basadas en tiempo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

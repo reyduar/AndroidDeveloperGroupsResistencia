@@ -1,0 +1,154 @@
+
+Autor: Ariel Duarte
+Fecha: 04/08/2012
+------------------------------------------
+ANDROID ANDENGINE
+------------------------------------------
+Refencias en Español: http://droideando.blogspot.com.ar/p/introduccion-andengine.html
+
+AndEngine es un Engine 2d usando Opengl para juegos para la plataforma Android.
+
+
+{ YouWave }
+
+YouWave es un emulador del sistema operativo Android que permite a los desarrolladores de aplicaciones para este dispositivo testearlas desde un ordenador con Windows.
+
+Concretamente, YouWave emula un dispositivo con Android 2.2, versión también conocida bajo el nombre clave “Froyo“.
+
+La aplicación simula la existencia de una tarjeta SD, para guardar partidas de juegos, y guarda el estado del sistema, 
+lo que permite un arranque más rápido (como una suspensión). También permite la ejecución de juegos online multijugador, 
+y modos de pantalla vertical y horizontal.
+
+Estamos instalando esta herramienta para poder probar las aplicaciones realizadas por AndEngine
+
+URL: http://youwave.com/
+
+{ ANDENGINE }
+
+AndEngine es un Engine 2d usando Opengl para juegos para la plataforma Android.
+	
+
+	Url Examples : http://code.google.com/p/andengineexamples/
+	Url Official: http://www.andengine.org/forums/
+	Url Proyecto : https://github.com/nicolasgramlich/AndEngine.git
+	Refencias en Español: http://droideando.blogspot.com.ar/p/introduccion-andengine.html
+	Url Wiki: http://andengine.wikidot.com/getting-started-with-andengine
+
+	http://androideity.com/2011/08/23/andengine-el-motor-de-juegos-2d-opengl-para-android/
+
+	http://www.andengine.org/forums/tutorials/getting-started-with-andengine-t4858.html
+	Usuario : iariel
+	pass: masterin
+
+
+	Descargar la libreria de AndEngine desde este enlace.
+	http://dl.dropbox.com/u/30775291/andengine.jar
+	
+
+En la actualidad existen otros Engine para desarrollar juego como
+
+- LibGDX : es un engine no muy popular, pero va creciendo rapidamente gracias a su facilidad de desarrollo y su documentacion.
+	Url Oficial Web: http://libgdx.badlogicgames.com/
+	Url Proyectos: https://github.com/badlogic/libgdx	
+	Url code: http://code.google.com/p/libgdx
+
+	
+
+- MIT App Inventor: Es un engine de Google que fue abandonado y tomado por MiT Lab
+	Url: http://appinventor.mit.edu/
+	URl es: http://www.appinventor.es/
+
+- Otros Engine 3D Games para Android
+
+	http://stackoverflow.com/questions/5206089/game-engine-for-android
+
+
+
+La Url para conseguir los codigos de ejemplos de sus aplicaciones
+http://code.google.com/p/andengineexamples/
+
+
+{ ESTRUCTURA Y CLASES ANDENGINE }
+
+	BaseGameActivity: Es la clase base el motor de todo el Framework implementa toda la estructura necesario para el desarrollo del juego.
+	
+	Estructura de la clase en la que se implementa BaseGameActivity
+
+	// ===========================================================
+	// Constants
+	// ===========================================================
+		private static final int CAMERA_WIDTH = 720;
+		private static final int CAMERA_HEIGHT = 480;
+
+	// =========================================================== 
+	// Fields
+	// ===========================================================
+		private Camera mCamera;
+		private BitmapTextureAtlas mBitmapTextureAtlas;
+		private TextureRegion mFaceTextureRegion;
+	
+	// ===========================================================
+	// Constructors
+	// ===========================================================
+
+	// ===========================================================
+	// Getter & Setter
+	// ===========================================================
+
+	// ===========================================================
+	// Methods for/from SuperClass/Interfaces
+	// ===========================================================
+
+-->	Son 4 los metododos necesarios que tenemos que sobrescribir 
+
+	1° onLoadEngine():  	Es llamado cuando el motor del juego es cargado, aqui donde vamos a inicializar la camara y el motor 
+	2° onLoadResources():	Es el encargado de cargar los recursos requeridos por nuestro juego.
+	3° onLoadScene():
+	4° onLoadComplete() :
+
+			@Override
+			public Engine onLoadEngine() {
+				this.mCamera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
+				return new Engine(new EngineOptions(true, ScreenOrientation.LANDSCAPE, new RatioResolutionPolicy(CAMERA_WIDTH, CAMERA_HEIGHT), this.mCamera));
+			}
+
+			@Override
+			public void onLoadResources() {
+				this.mBitmapTextureAtlas = new BitmapTextureAtlas(32, 32, TextureOptions.BILINEAR_PREMULTIPLYALPHA);
+				BitmapTextureAtlasTextureRegionFactory.setAssetBasePath("gfx/");
+				this.mFaceTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mBitmapTextureAtlas, this, "tripulacion.png", 0, 0);
+
+				this.mEngine.getTextureManager().loadTexture(this.mBitmapTextureAtlas);
+			}
+
+			@Override
+			public Scene onLoadScene() {
+				this.mEngine.registerUpdateHandler(new FPSLogger());
+
+				final Scene scene = new Scene();
+				scene.setBackground(new ColorBackground(0.09804f, 0.6274f, 0.8784f));
+
+				/* Calculate the coordinates for the face, so its centered on the camera. */
+				final int centerX = (CAMERA_WIDTH - this.mFaceTextureRegion.getWidth()) / 2;
+				final int centerY = (CAMERA_HEIGHT - this.mFaceTextureRegion.getHeight()) / 2;
+
+				/* Create the face and add it to the scene. */
+				final Sprite face = new Sprite(centerX, centerY, this.mFaceTextureRegion);
+				scene.attachChild(face);
+
+				return scene;
+				
+			}
+
+			@Override
+			public void onLoadComplete() {
+
+			}
+
+
+
+
+
+
+
+

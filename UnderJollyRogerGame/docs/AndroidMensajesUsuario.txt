@@ -1,0 +1,116 @@
+Refencias en Español: http://www.todopocketpc.com/showthread.php/218875-Programaci%C3%B3n-en-Android-Recursos-en-Espa%C3%B1ol
+Autor: Ariel Duarte
+Fecha: 28/07/2012
+------------------------------------------
+ANDROID MENSAJES 
+------------------------------------------
+{ Toast }
+
+
+Es una clase que permite crear una view para mostrar mensajes emergentes en un determinado tiempo
+
+ .La duracion del mensaje se define por las constantes:
+	- LENGTH_LONG 
+	- LENGTH_SHORT
+
+
+	// ---Muestra mensaje emergente con Toast--- //
+	Toast.makeText(getBaseContext(), "Valores guardados correctamente!!", Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
+
+
+{ AlertDialog.Builder}
+
+
+El diálogo más simple que podemos crear con Android en una ventana con un título, un mensaje y un botón para cerrarlo.
+Muy útil si tenemos que informar al usuario y no queremos que la ventana desaparezca hasta que el usuario presione un botón para ocultar el diálogo.
+
+1º Primero debemos importar la clase AlertDialog: que es la encargada de crear la ventana por medio de una clase Builder.
+2º Creamos el objeto AlertDialog.Builder builder = new AlertDialog.Builder(this)
+3º Una vez creado el objeto procedemos a llamar al método que define el título a mostrar en el diálogo: 
+	builder.setTitle("Importante");
+4º El mensaje propiamente dicho lo configuramos llamando al método setMessage:
+	builder.setMessage("Este es un programa solo de prueba y no la versión completa");
+5º Mostramos un botón para poder cerrar el diálogo:
+	builder.setPositiveButton("OK",null);
+6º Finalmente llamamos al método que crea el diálogo y el que lo visualiza:
+	builder.create();
+        builder.show(); 
+
+El siguiente ejemplo es un metodo generico de alertas
+
+	public void alertMenssage(String titulo, String texto) {
+		AlertDialog.Builder msg = new AlertDialog.Builder(AplicacionBaseDatosActivity.this);
+		msg.setTitle(titulo);
+		msg.setMessage(texto);
+		msg.setIcon(android.R.drawable.ic_dialog_alert);
+		msg.setNeutralButton("Aceptar", null);
+		msg.show();
+	}
+
+Directamente se implementa asi en cualquier parte del codigo donde se lo requiera:
+	alertMenssage("Atención","No existen datos para consultar");
+
+
+
+Otro ejemplo de una alerta para tomar desiciones podria ser la siguiente:
+Ademas incluimos un mensaje emergente con  Toast
+/**
+ * Código del botón eliminar base de datos:
+*/
+	btnEliminar.setOnClickListener(new View.OnClickListener() {
+	
+	//Eliminar la base de datos de la agenda
+			
+                       @Override
+			public void onClick(View v) {
+				AlertDialog.Builder alertDialog = new AlertDialog.Builder(AplicacionBaseDatosActivity.this);
+				alertDialog.setMessage("¿Desea eliminar la base de datos por completo?");
+				alertDialog.setTitle("Eliminar Personas...");
+				alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+				alertDialog.setCancelable(false);
+				alertDialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						try {
+							Toast.makeText(getApplicationContext(), "Eliminando Base de Datos", Toast.LENGTH_LONG).show();
+							boolean  resultado = deleteDatabase(nombreBD);
+							if(resultado) 
+								Toast.makeText(getApplicationContext(), "Base de datos eliminada correctamente", Toast.LENGTH_LONG).show();
+							else 
+								Toast.makeText(getApplicationContext(), "No se ha podido eliminar la base de datos", Toast.LENGTH_LONG).show(); 
+						} catch (Exception e) {
+							Toast.makeText(getApplicationContext(), "No se ha podido eliminar la base de datos", Toast.LENGTH_LONG).show();
+						}
+						  crearOabrirBaseDatos();
+					}
+				});
+				alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						Toast.makeText(getApplicationContext(), "Eliminación de la Base de Datos Cancelada", Toast.LENGTH_LONG).show();
+					}
+				});
+				alertDialog.show();
+			    }
+		    });
+
+	
+
+
+
+
+
+
+
+
+
+
+
