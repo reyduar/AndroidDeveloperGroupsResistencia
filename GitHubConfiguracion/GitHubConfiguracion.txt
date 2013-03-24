@@ -152,3 +152,5 @@ git push
 
 
 luego se hace el commit y el push y ya desaparece de del repositorio en la nube
+
+Fuente : http://www.commandlinefu.com/commands/view/1246/git-remove-files-which-have-been-deleted
