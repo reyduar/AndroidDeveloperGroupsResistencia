@@ -40,7 +40,7 @@ Lineas de Comandos Bash git
 	*Comando para crear la nueva clave git y configuracion basica de git
 		~$ ssh-keygen -t rsa -C "androiddevgr@gmail.com"
 		--> nos pregunta en el directorio donde se guardata la clave (enter)
-		--> nos pide la contraseña: developer2012*	
+		--> nos pide la contraseï¿½a: developer2012*	
 		--> se genera la clave: The key fingerprint is: 4a:cf:88:54:47:15:29:e7:ec:7e:7b:61:84:8d:19:c1 androiddevgr@gmail.com
 
 2- Crear una nueva cuenta para git
@@ -87,7 +87,7 @@ Obs.: Falto configurar el Token por que no aparecio el codigo secreto donde debe
 	C:\proyectosgit>git init
 	Initialized empty Git repository in C:/proyectosgit/.git/
 
-	- Ahora añadimos los archivos del repositorio nuevo que acabamos de inicializar tiene un solo archivo de ejemplo
+	- Ahora aï¿½adimos los archivos del repositorio nuevo que acabamos de inicializar tiene un solo archivo de ejemplo
 
 	~$ git init add EjemploAdd.txt
 
@@ -140,3 +140,15 @@ C:\test_automation\automation\iseatz_automation\project\amex\spec>git config --g
 
 
 git clone git@github.com:iarielduarte/FrameworkAutomationJava.git
+
+
+PARA ELIMINAR ARCHIVO QUE SE ELMINARON EN EL REPOSITORIO LOCAL Y PARA ELIMINARLOS DE LA NUBE ES ASI:
+
+git add -u
+
+git ct -m "Remove"
+
+git push
+
+
+luego se hace el commit y el push y ya desaparece de del repositorio en la nube
