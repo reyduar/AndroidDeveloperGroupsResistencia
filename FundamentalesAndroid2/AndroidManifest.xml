@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.videotutoriales.juegosandroid"
+      android:versionCode="1"
+      android:versionName="1.0" android:installLocation="preferExternal">
+    
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">
+        <activity android:name=".FundamentalesAndroid"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"
+			      android:configChanges="keyboard|keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:label="Life Cycle Test"
+                  android:name=".LifeCycleTest"
+                  android:configChanges="keyboard|keyboardHidden|orientation"/>
+         <activity android:label="Single Touch Test"
+                  android:name=".SingleTouchTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+         <activity android:label="Multi Touch Test"
+                  android:name=".MultiTouchTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+         <activity android:label="Key Test"
+                  android:name=".KeyTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+         <activity android:label="Accelerometer Test"
+                  android:name=".AccelerometerTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+         <activity android:label="AssetsTest"
+                  android:name=".AssetsTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+         <activity android:label="External Storage Test"
+                  android:name=".ExternalStorageTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+          <activity android:label="Sound Pool Test"
+                  android:name=".SoundPoolTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+          <activity android:label="AudioPlayerTest"
+                  android:name=".AudioPlayerTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+          <activity android:label="MediaPlayerTest"
+                  android:name=".MediaPlayerTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+           <activity android:label="Player Touch Test"
+                  android:name=".PlayerTouchTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+           <activity android:label="Audio Record Test"
+                  android:name=".AudioRecordTest"
+                  android:configChanges="keyboard|keyboardHidden"/>
+       
+    </application>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="15"/>
+</manifest>
