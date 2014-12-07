@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/general">
+		<CheckBoxPreference
+			android:key="@string/pref_auto_connect" 
+			android:title="@string/connectionAutoEnable"
+			android:summary="@string/connectionAutoSummary"
+			android:defaultValue="true"
+			/>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/connectionNotifications">
+		<CheckBoxPreference 
+			android:key="@string/pref_notif_enabled" 
+			android:title="@string/connectionNotificationsEnable" 
+			android:summary="@string/connectionNotificationsSummary"
+			android:defaultValue="true"
+			/>
+
+		<RingtonePreference 
+			android:dependency="@string/pref_notif_enabled"
+			android:key="@string/pref_notif_ringtone" 
+			android:title="@string/ringtone" 
+			android:ringtoneType="notification" 
+			android:summary="@string/connectionRingtoneSummary"
+			android:defaultValue="content://settings/system/notification_sound"
+			/>
+
+		<CheckBoxPreference 
+			android:dependency="@string/pref_notif_enabled"
+			android:key="@string/pref_notif_vibrate"  
+			android:title="@string/connectionNotificationsVibrate"
+			android:summary="@string/connectionNotificationsVibrateSummary"
+			android:defaultValue="false"
+			/>
+	</PreferenceCategory>
+</PreferenceScreen>  

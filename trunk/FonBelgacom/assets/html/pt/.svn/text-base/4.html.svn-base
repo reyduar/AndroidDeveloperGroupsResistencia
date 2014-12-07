@@ -1,0 +1,15 @@
+<html>
+<head>
+<link rel=StyleSheet href="../styles.css" type="text/css" media=screen />
+</head>
+<body>
+<div class="title">
+¿Os hotspots da Fon são seguros?
+</div>
+<div class="text">
+<p>
+A Fon leva a sua segurança a sério. Os routers da Fon criam dois sinais WiFi: um sinal privado e encriptado ("MyPlace") que só está acessível pelo dono do Ponto Fon; e um segundo sinal público ("FON_FREE_INTERNET") que outros usuários da Fon que estão perto do hotspot podem usar, fazendo o login com o nome de usuário e a senha da Fon. Todos os detalhes da conta são encriptados durante o login. 
+</p>
+</div>
+</body>
+</html>

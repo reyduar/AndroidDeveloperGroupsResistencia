@@ -1,0 +1,18 @@
+<html>
+<head>
+<link rel=StyleSheet href="../styles.css" type="text/css" media=screen />
+</head>
+<body>
+<div class="title">
+¿Son seguros los Fon Spots?
+</div>
+<div class="text">
+<p>
+Fon se toma la seguridad en serio. Los routers de Fon emiten dos señales WiFi: una privada, cifrada ("MyPlace") a la que sólo puede acceder el propietario del Fon Spot y una pública ("FON_FREE_INTERNET") que pueden utilizar otros usuarios de Fon en las inmediaciones del Fon Spot iniciando sesión con su nombre de usuario y contraseña de Fon. 
+</p>
+<p>
+El cifrado protege los datos durante el inicio de sesión.
+</p>
+</div>
+</body>
+</html>

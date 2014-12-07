@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp" >
+
+    <ImageButton
+        android:id="@+id/notif_dismiss_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:src="@android:drawable/ic_notification_clear_all" />
+
+    <RelativeLayout
+        android:id="@+id/notif_body"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/notif_dismiss_btn" >
+
+        <ImageView
+            android:id="@+id/notif_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/notif_title"
+            style="@android:style/TextAppearance.Medium"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/notif_icon" />
+
+        <TextView
+            android:id="@+id/notif_text"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notif_title"
+            android:layout_toRightOf="@id/notif_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>

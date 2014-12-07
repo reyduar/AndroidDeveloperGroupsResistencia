@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger
+END
+HTTPLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger/HTTPLogger.java
+END
+LivedoorLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger/LivedoorLogger.java
+END
+WISPrLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger/WISPrLogger.java
+END
+BTFonLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger/BTFonLogger.java
+END
+SimpleHTTPLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger/SimpleHTTPLogger.java
+END
+NeufLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger/NeufLogger.java
+END
+WebLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger/WebLogger.java
+END
+LoggerResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/logger/LoggerResult.java
+END

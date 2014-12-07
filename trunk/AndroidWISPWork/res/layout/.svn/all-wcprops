@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/fon-android/!svn/ver/120/main/dev/trunk/AndroidWISPWork/res/layout
+END
+help_list_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/fon-android/!svn/ver/87/main/dev/trunk/AndroidWISPWork/res/layout/help_list_item.xml
+END
+help_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/fon-android/!svn/ver/104/main/dev/trunk/AndroidWISPWork/res/layout/help_list.xml
+END
+preferences_advanced.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/fon-android/!svn/ver/84/main/dev/trunk/AndroidWISPWork/res/layout/preferences_advanced.xml
+END
+notification.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/fon-android/!svn/ver/23/main/dev/trunk/AndroidWISPWork/res/layout/notification.xml
+END
+top_bar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/fon-android/!svn/ver/117/main/dev/trunk/AndroidWISPWork/res/layout/top_bar.xml
+END
+alert_dialog.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/fon-android/!svn/ver/112/main/dev/trunk/AndroidWISPWork/res/layout/alert_dialog.xml
+END
+home.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/fon-android/!svn/ver/115/main/dev/trunk/AndroidWISPWork/res/layout/home.xml
+END
+account.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/fon-android/!svn/ver/120/main/dev/trunk/AndroidWISPWork/res/layout/account.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/fon-android/!svn/ver/81/main/dev/trunk/AndroidWISPWork/res/layout/web.xml
+END

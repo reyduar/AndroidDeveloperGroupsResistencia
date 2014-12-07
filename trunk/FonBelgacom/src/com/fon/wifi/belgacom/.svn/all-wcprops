@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/fon-android/!svn/ver/174/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom
+END
+HelpListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/HelpListActivity.java
+END
+FonNetworkListProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/fon-android/!svn/ver/144/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/FonNetworkListProvider.java
+END
+HomeActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/HomeActivity.java
+END
+NotificationHandlerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/NotificationHandlerService.java
+END
+ResetStatusService.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/ResetStatusService.java
+END
+AccountActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/AccountActivity.java
+END
+FonCheckConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/FonCheckConnectService.java
+END
+ResetStatusReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/ResetStatusReceiver.java
+END
+RouterConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/RouterConnectService.java
+END
+FonConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fon-android/!svn/ver/153/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/FonConnectService.java
+END
+FonApp.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/fon-android/!svn/ver/166/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/FonApp.java
+END
+FonBlackListProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/fon-android/!svn/ver/144/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/FonBlackListProvider.java
+END
+PreferencesAdvanced.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/PreferencesAdvanced.java
+END
+WifiScanReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/WifiScanReceiver.java
+END
+InternetCheckAlarmReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/fon-android/!svn/ver/174/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/InternetCheckAlarmReceiver.java
+END
+WebActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/WebActivity.java
+END
+RouterConnectionStateChangeReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/fon-android/!svn/ver/142/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/RouterConnectionStateChangeReceiver.java
+END
+InternetCheckOnStandByReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/fon-android/!svn/ver/174/main/dev/trunk/FonBelgacom/src/com/fon/wifi/belgacom/InternetCheckOnStandByReceiver.java
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/fon-android/!svn/ver/103/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity
+END
+ConnectivityUtis.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/fon-android/!svn/ver/100/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/ConnectivityUtis.java
+END
+FonNetworkListProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/fon-android/!svn/ver/103/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/FonNetworkListProvider.java
+END
+RouterConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/fon-android/!svn/ver/44/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/RouterConnectService.java
+END
+RouterConnectionStateChangeReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/fon-android/!svn/ver/52/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/RouterConnectionStateChangeReceiver.java
+END
+FonConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/fon-android/!svn/ver/69/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/FonConnectService.java
+END

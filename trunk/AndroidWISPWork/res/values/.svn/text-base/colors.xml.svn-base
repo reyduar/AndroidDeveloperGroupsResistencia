@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bg_btn">#fdbc48</color>
+    <color name="bg_btn_pressed">#ff920a</color>
+    <color name="font_title">@android:color/white</color>
+    <color name="font_description">@color/gray</color>
+    <color name="font_link">@color/orange</color>
+    <color name="font_highlighted">@color/orange</color>
+    
+    <color name="font_dialog_title">@color/gray</color>
+    
+    <color name="font_button_default">@android:color/white</color>
+    <color name="font_button_selected">@android:color/white</color>
+    <color name="font_button_pressed">@android:color/white</color>
+    
+    <color name="bg_title_bar">@android:color/darker_gray</color>
+    <color name="bg_label_default">@android:color/transparent</color>
+    <color name="bg_label_selected">@color/orange</color>
+    
+    <color name="bg_header_bar">#ddd</color>
+    
+    
+    <color name="gray">#777777</color>
+    <color name="orange">#fca916</color>
+
+</resources>

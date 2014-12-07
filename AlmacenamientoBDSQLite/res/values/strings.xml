@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">AlmacenamientoBDSQLite</string>
+    <string name="hello_world">Powerby SQLite3</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Almacenamiento SQLite</string>
+
+</resources>

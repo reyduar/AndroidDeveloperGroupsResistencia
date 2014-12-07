@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/fon-android/!svn/ver/165/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/notification
+END
+FONNotificationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/fon-android/!svn/ver/165/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/notification/FONNotificationManager.java
+END
+NotificationHandlerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/fon-android/!svn/ver/157/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/notification/NotificationHandlerService.java
+END
+NotificationUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/notification/NotificationUtils.java
+END

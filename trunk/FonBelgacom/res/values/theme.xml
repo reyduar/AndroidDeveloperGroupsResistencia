@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:fon="http://schemas.android.com/apk/res/com.fon.wifi">
+
+    <style name="FONTheme.Belgacom">
+        
+        <item name="check_fon_connection_on_stand_by" >true</item>
+        <item name="check_fon_connection_in_background" >true</item>
+        <item name="check_fon_connection_minutes_interval" >15</item>
+        
+        <!-- assets cross app -->
+        <item name="drawable_logo_header" >@drawable/logo_header</item>
+        <item name="color_bg_header_bar" >#ddd</item>
+        
+        <item name="color_title_bar_background" >#aaa</item>
+        <item name="color_title_bar_font" >@android:color/white</item>
+        
+        <item name="color_font_content" >#6b6b6b</item>
+        
+        <!-- assets home -->
+        <item name="drawable_background" >@drawable/background</item>
+        <item name="drawable_logo_banner" >@drawable/logo_banner</item>
+        <item name="drawable_ic_account" >@drawable/ic_account</item>
+        <item name="drawable_ic_help" >@drawable/ic_help</item>
+        
+        <!-- assets help -->
+        <item name="help_list_selector" >@drawable/list_selector</item>
+        <item name="drawable_arrow" >@drawable/arrow</item>
+        <item name="color_divider" >#ddd</item>
+        <item name="color_font_link" >@color/highlight</item>
+        
+        <!-- assets alert dialog -->
+        <item name="drawable_background_dialog_header" >@drawable/dialog_background_header</item>
+        <item name="drawable_background_dialog_body" >@drawable/dialog_background_body</item>
+        <item name="color_dialog_title_font" >#5f5f5f</item>
+        
+        <!-- assets web view (help and about) -->
+        <item name="colo_bg_web_view" >@android:color/white</item>
+        
+        <!-- assets menu -->
+        <item name="drawable_ic_menu_quit" >@drawable/ic_quit</item>
+        
+        <!-- button font color-->
+        <item name="button_style" >@style/Button</item>
+        <item name="button_text_appearence" >@style/ButtonTextAppearance</item>
+        
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:checkboxStyle">@style/CheckBox</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        
+    </style>
+    
+    <style name="FONTheme.Preferences">
+        <!-- assets menu -->
+        <item name="drawable_ic_menu_quit" >@drawable/ic_quit</item>
+    </style>
+</resources>

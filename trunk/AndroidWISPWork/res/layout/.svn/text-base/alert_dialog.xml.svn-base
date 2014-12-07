@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content" 
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_back_inset">
+
+    <TextView
+        android:id="@+id/alert_dialog_title"
+        style="@style/DialogWindowTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="error"/>
+    
+    <TextView android:id="@+id/alert_dialog_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        style="@style/Description"
+        android:text="error_desc"/>
+
+    <Button
+        android:id="@+id/alert_dialog_btn_ok"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/btn_ok" 
+        android:layout_marginBottom="15dp"/>
+
+
+</LinearLayout>

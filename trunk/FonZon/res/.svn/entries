@@ -1,0 +1,70 @@
+10
+
+dir
+176
+https://projects.globant.com/svn/fon-android/main/dev/trunk/FonZon/res
+https://projects.globant.com/svn/fon-android
+
+
+
+2012-06-21T13:15:33.142341Z
+173
+edgardo.martinez
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7f5de421-0437-4da1-9589-39a144676b62
+
+values
+dir
+
+values-br
+dir
+
+values-pt
+dir
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+values-es
+dir
+
+values-fr
+dir
+
+values-de
+dir
+
+values-nl
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+values-pl
+dir
+
+drawable-xhdpi
+dir
+
+layout
+dir
+

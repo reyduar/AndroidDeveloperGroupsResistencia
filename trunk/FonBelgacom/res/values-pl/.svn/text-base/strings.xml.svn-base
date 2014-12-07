@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Sie&#263; WiFi</string>
+    <string name="connectionNotifications">Powiadomienia</string>
+    <string name="connectionNotificationsEnable">W&#322;&#261;cz powiadomienia</string>
+    <string name="connectionNotificationsSummary">Otrzymywanie powiadomień, po po&#322;&#261;czeniu z Belgacom Fon</string>
+    <string name="connectionNotificationsVibrate">Wibracja</string>
+    <string name="connectionNotificationsVibrateSummary">Wibracja przy po&#322;&#261;czeniu</string>
+    <string name="connectionAutoEnable">Auto-&#322;&#261;czenie</string>
+    <string name="connectionAutoSummary">Automatycznie &#322;&#261;cz si&#281; z dost&#281;pnym hotspotem Belgacom Fon</string>
+    <string name="connectionRingtoneSummary">Ustaw dźwi&#281;k powiadomień</string>
+    <string name="ringtone">Dźwi&#281;k</string>
+    <string name="general">Konfiguracja logowania</string>
+    <string name="label_account">Moje konto</string>
+    <string name="label_settings">Ustawienia</string>
+    <string name="label_help">Pomoc</string>
+    <string name="label_log_off">Wyloguj</string>
+    <string name="label_save">Zapisz</string>
+    <string name="label_about">O nas</string>
+    <string name="label_confirm_log_off">Wyloguj si&#281; z sieci Fon?</string>
+    <string name="btn_log_off">Wyloguj si&#281;</string>
+    <string name="btn_cancel">Anuluj</string>
+    <string name="btn_ok">OK</string>
+    <string name="label_username">Nazwa u&#380;ytkownika: </string>
+    <string name="label_password">Has&#322;o:</string>
+    <string name="label_show_password">Poka&#380; has&#322;o</string>
+    <string name="label_hint_account">Podaj swoj&#261; nazw&#281; u&#380;ytkownika i has&#322;o Belgacom. \ nPo&#322;&#261;czysz si&#281; automatycznie, gdy znajdziesz si&#281; w pobli&#380;u hotspotu Belgacom.</string>
+    <string name="notif_error">B&#322;&#261;d</string>
+    <string name="notif_default_ssid">Belgacom Fon</string>
+    <string name="notif_error_100">Logowanie nie powiod&#322;o si&#281;</string>
+    <string name="notif_error_1024">WISPr nie rozpoznane</string>
+    <string name="notif_error_255">B&#322;&#261;d wewn&#281;trzny</string>
+    <string name="notif_error_not_authorized">Brak autoryzacji</string>
+    <string name="notif_error_not_such_user">Nie znaleziono u&#380;ytkownika</string>
+    <string name="notif_error_not_enough_credit">Nie wystarczaj&#261;ce &#347;rodki na koncie</string>
+    <string name="notif_error_user_not_found">Nie znaleziono u&#380;ytkownika</string>
+    <string name="notif_error_user_in_black_list">U&#380;ytkownik znajduje si&#281; na czarnej li&#347;cie.</string>
+    <string name="notif_error_unknown">Nieznany b&#322;&#261;d</string>
+    <string name="notif_error_title">B&#322;&#261;d Belgacom Fon</string>
+    <string name="notif_error_text">B&#322;&#261;d po&#322;&#261;czenia z Belgacom Fon</string>
+    <string name="notif_connected_title">Belgacom Fon</string>
+    <string name="notif_connected_text">Po&#322;&#261;czony z %s</string>
+    <string name="notif_disconnected_title">Belgacom Fon od&#322;&#261;czone</string>
+    <string name="notif_disconnected_text">Od&#322;&#261;czony od %s</string>
+    <string name="notif_available_title">Belgacom Fon dost&#281;pne</string>
+    <string name="notif_available_text">Dotknij, aby po&#322;&#261;czy&#263;</string>
+    <string name="notif_no_credentials_title">Nazwa u&#380;ytkownika i has&#322;o Belgacom Fon</string>
+    <string name="notif_no_credentials_text">Ustaw nazw&#281; u&#380;ytkownika i has&#322;o, które b&#281;d&#261; u&#380;ywane do po&#322;&#261;czenia z Belgacom Fon</string>
+    <string name="help_title">Pomoc i wsparcie</string><string name="html_language_folder">pl</string>
+    <string name="help_text">Je&#347;li potrzebujesz pomocy, odwiedź <a href="http://corp.fon.com/pl/support/">http://corp.fon.com/support/</a></string>
+    <string-array name="help_question_list">
+        <item>¿Co to jest Fon?</item>
+        <item>¿Co to jest Fon Spot?</item>
+        <item>¿Jak mog&#281; do&#322;&#261;czy&#263; do Fon?</item>
+        <item>¿Co to jest karnet dost&#281;pu Fon?</item>
+        <item>¿Czy Fon Spoty s&#261; bezpieczne?</item>
+    </string-array>
+</resources>

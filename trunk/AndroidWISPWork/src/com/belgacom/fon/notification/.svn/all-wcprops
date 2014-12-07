@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/fon-android/!svn/ver/119/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/notification
+END
+FONNotificationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/fon-android/!svn/ver/95/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/notification/FONNotificationManager.java
+END
+NotificationHandlerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/fon-android/!svn/ver/119/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/notification/NotificationHandlerService.java
+END
+NotificationUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/fon-android/!svn/ver/23/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/notification/NotificationUtils.java
+END

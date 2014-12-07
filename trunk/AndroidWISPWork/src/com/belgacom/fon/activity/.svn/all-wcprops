@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/fon-android/!svn/ver/122/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/activity
+END
+FonActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fon-android/!svn/ver/115/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/activity/FonActivity.java
+END
+HelpListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/fon-android/!svn/ver/115/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/activity/HelpListActivity.java
+END
+HomeActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/fon-android/!svn/ver/122/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/activity/HomeActivity.java
+END
+PreferencesAdvanced.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/fon-android/!svn/ver/103/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/activity/PreferencesAdvanced.java
+END
+AccountActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/fon-android/!svn/ver/104/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/activity/AccountActivity.java
+END
+WebActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fon-android/!svn/ver/115/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/activity/WebActivity.java
+END

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/fon-android/!svn/ver/122/main/dev/trunk/AndroidWISPWork/res/drawable
+END
+btn_check.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/fon-android/!svn/ver/112/main/dev/trunk/AndroidWISPWork/res/drawable/btn_check.xml
+END
+dialog_back_inset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/fon-android/!svn/ver/105/main/dev/trunk/AndroidWISPWork/res/drawable/dialog_back_inset.xml
+END
+btn.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/fon-android/!svn/ver/122/main/dev/trunk/AndroidWISPWork/res/drawable/btn.xml
+END
+btn_text_color.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/fon-android/!svn/ver/104/main/dev/trunk/AndroidWISPWork/res/drawable/btn_text_color.xml
+END
+notif_fon_connected.png
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/fon-android/!svn/ver/10/main/dev/trunk/AndroidWISPWork/res/drawable/notif_fon_connected.png
+END
+edit_text.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/fon-android/!svn/ver/119/main/dev/trunk/AndroidWISPWork/res/drawable/edit_text.xml
+END
+ic_quit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/fon-android/!svn/ver/69/main/dev/trunk/AndroidWISPWork/res/drawable/ic_quit.xml
+END
+btn_bg_default.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/fon-android/!svn/ver/120/main/dev/trunk/AndroidWISPWork/res/drawable/btn_bg_default.xml
+END
+text_field_bg_default.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/fon-android/!svn/ver/119/main/dev/trunk/AndroidWISPWork/res/drawable/text_field_bg_default.xml
+END
+btn_bg_selected.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/fon-android/!svn/ver/120/main/dev/trunk/AndroidWISPWork/res/drawable/btn_bg_selected.xml
+END
+notif_fon_available.png
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/fon-android/!svn/ver/16/main/dev/trunk/AndroidWISPWork/res/drawable/notif_fon_available.png
+END
+text_field_bg_selected.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/119/main/dev/trunk/AndroidWISPWork/res/drawable/text_field_bg_selected.xml
+END
+list_selector.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/fon-android/!svn/ver/84/main/dev/trunk/AndroidWISPWork/res/drawable/list_selector.xml
+END
+background_label.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/fon-android/!svn/ver/104/main/dev/trunk/AndroidWISPWork/res/drawable/background_label.xml
+END
+notif_fon_error.png
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/fon-android/!svn/ver/10/main/dev/trunk/AndroidWISPWork/res/drawable/notif_fon_error.png
+END

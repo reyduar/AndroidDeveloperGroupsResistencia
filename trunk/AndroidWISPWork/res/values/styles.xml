@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AlertDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    <item name="android:layout_height">wrap_content</item>
+    </style>
+
+	<style name="DialogWindowTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/font_dialog_title</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="CheckBox" parent="@android:style/Widget.CompoundButton">
+        <item name="android:button">@drawable/btn_check</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    
+    <style name="EditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="Button" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn</item>
+        <item name="android:textColor">@drawable/btn_text_color</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">13dp</item>
+        <item name="android:paddingRight">13dp</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+    </style> 
+    
+    <style name="TextAppearanceButton" parent="@android:style/TextAppearance.Widget.Button">
+        <item name="android:textColor">@drawable/btn_text_color</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>  
+    
+    <style name="Button_Home">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    
+    <style name="Title" parent="@android:style/Widget.TextView">
+        <item name="android:background">@color/bg_title_bar</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/font_title</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+    </style>
+    
+    <style name="Description" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/font_description</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textColorLink">@color/font_link</item> 
+        <item name="android:textColorHighlight">@color/font_highlighted</item> 
+        <item name="android:linksClickable">true</item>
+    </style>
+  
+    <style name="NotificationText" />
+
+    <style name="NotificationTitle">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

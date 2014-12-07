@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/fon-android/!svn/ver/94/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util
+END
+HttpUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/94/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/HttpUtils.java
+END
+RemoveHttpsRedirectHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/fon-android/!svn/ver/3/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/RemoveHttpsRedirectHandler.java
+END
+Utils.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/fon-android/!svn/ver/16/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/Utils.java
+END
+DisplayToast.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/fon-android/!svn/ver/4/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/DisplayToast.java
+END
+LogRedirectHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/fon-android/!svn/ver/3/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/LogRedirectHandler.java
+END
+WISPrConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fon-android/!svn/ver/88/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/WISPrConstants.java
+END
+WISPrUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/fon-android/!svn/ver/3/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/WISPrUtil.java
+END
+FONUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/fon-android/!svn/ver/69/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/FONUtils.java
+END
+BackupAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/fon-android/!svn/ver/3/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/BackupAgent.java
+END
+FONPreferences.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fon-android/!svn/ver/88/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/FONPreferences.java
+END
+BackupAgentHelperWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/fon-android/!svn/ver/3/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/BackupAgentHelperWrapper.java
+END
+HttpResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/3/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/util/HttpResult.java
+END

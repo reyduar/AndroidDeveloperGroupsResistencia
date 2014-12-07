@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/checker
+END
+AbstractInternetCheckReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/checker/AbstractInternetCheckReceiver.java
+END
+InternetCheckScheduler.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/checker/InternetCheckScheduler.java
+END
+FonCheckConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/fon-android/!svn/ver/140/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/checker/FonCheckConnectService.java
+END

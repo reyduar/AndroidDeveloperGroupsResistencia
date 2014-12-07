@@ -1,0 +1,73 @@
+10
+
+dir
+176
+https://projects.globant.com/svn/fon-android/main/dev/trunk/AndroidWISPWork/res
+https://projects.globant.com/svn/fon-android
+
+
+
+2012-05-29T17:47:47.875408Z
+122
+juan.chiaradia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7f5de421-0437-4da1-9589-39a144676b62
+
+values-pt
+dir
+
+drawable
+dir
+
+values-de
+dir
+
+drawable-xhdpi
+dir
+
+values
+dir
+
+values-br
+dir
+
+drawable-hdpi
+dir
+
+values-es
+dir
+
+menu
+dir
+
+values-fr
+dir
+
+values-nl
+dir
+
+drawable-ldpi
+dir
+
+values-pl
+dir
+
+drawable-mdpi
+dir
+
+layout
+dir
+

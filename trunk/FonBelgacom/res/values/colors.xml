@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="text_field_selected_stroke" >#333</color>
+	<color name="text_field_default_stroke" >#aaaaaa</color>
+	<color name="text_field_bg" >#eeeeee</color>
+	
+	<color name="highlight">#fca916</color>
+        
+    <color name="font_button_default">@android:color/white</color>
+    <color name="font_button_pressed">@android:color/white</color>
+</resources>

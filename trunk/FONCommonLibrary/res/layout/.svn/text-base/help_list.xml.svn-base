@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_bar" />
+
+    <TextView
+        style="@style/TopHeader"
+        android:text="@string/help_title" />
+    <TextView
+        android:id="@+id/help_text"
+        style="@style/Description.Help"
+        android:text="@string/help_text"
+        android:textColorLink="?color_font_link" />
+    
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitXY"
+        android:src="?color_divider" />
+    
+    <ListView
+        android:id="@+id/help_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:cacheColorHint="@android:color/transparent"/>
+
+</LinearLayout>

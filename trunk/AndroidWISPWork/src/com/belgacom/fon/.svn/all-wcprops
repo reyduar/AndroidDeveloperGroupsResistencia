@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/fon-android/!svn/ver/122/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon
+END
+FONStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/fon-android/!svn/ver/103/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/FONStatus.java
+END
+ResetStatusService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/fon-android/!svn/ver/56/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/ResetStatusService.java
+END
+WifiScanReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/fon-android/!svn/ver/22/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/WifiScanReceiver.java
+END
+FONLogin.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/fon-android/!svn/ver/67/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/FONLogin.java
+END
+ResetStatusReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fon-android/!svn/ver/51/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/ResetStatusReceiver.java
+END

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fon.wifi.belgacom"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="true" />
+
+    <application
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/FONTheme.Belgacom" 
+        android:name=".FonApp">
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.HOME_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PreferencesAdvanced"
+            android:screenOrientation="portrait"
+            android:theme="@style/FONTheme.Preferences" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.PREFERENCES_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HelpListActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.HELP_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AccountActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.ACCOUNT_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.WEB_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".WifiScanReceiver" >
+            <intent-filter>
+                <action android:name="android.net.wifi.SCAN_RESULTS" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".InternetCheckAlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.INTERNET_CHECK_ALARM_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".InternetCheckOnStandByReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".RouterConnectionStateChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ResetStatusReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".FonBlackListProvider"
+            android:authorities="com.fon.wifi.belgacom.FonBlackListProvider" />
+        <provider
+            android:name=".FonNetworkListProvider"
+            android:authorities="com.fon.wifi.belgacom.FonNetworkListProvider" />
+
+        <service android:name=".NotificationHandlerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.NOTIFICATION_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.NOTIFICATION_ACTION" />
+            </intent-filter>
+        </service>
+        <service android:name=".FonConnectService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.FON_CONNECT_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".FonCheckConnectService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.INTERNET_CHECK_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".RouterConnectService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.ROUTER_CONNECT_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ResetStatusService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.fon.wifi.belgacom.RESET_STATUS_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

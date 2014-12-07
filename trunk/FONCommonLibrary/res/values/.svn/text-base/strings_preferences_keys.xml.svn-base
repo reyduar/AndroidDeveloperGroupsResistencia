@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- Do not translate pref_ strings -->
+	<string name="pref_active">ACTIVE</string>
+	<string name="pref_username">USERNAME</string>
+	<string name="pref_password">PASSWORD</string>
+	<string name="pref_notif_enabled">NOTIF_ENABLED</string>
+	<string name="pref_notif_ringtone">NOTIF_RINGTONE</string>
+	<string name="pref_notif_vibrate">NOTIF_VIBRATE</string>
+	<string name="pref_auto_connect">AUTO_CONNECT</string>
+</resources>

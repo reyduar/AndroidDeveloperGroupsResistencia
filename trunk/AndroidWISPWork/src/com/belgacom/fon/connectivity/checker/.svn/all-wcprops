@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/fon-android/!svn/ver/69/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/checker
+END
+InternetCheckScheduler.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/fon-android/!svn/ver/59/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/checker/InternetCheckScheduler.java
+END
+InternetCheckAlarmReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/fon-android/!svn/ver/48/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/checker/InternetCheckAlarmReceiver.java
+END
+FonCheckConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/fon-android/!svn/ver/69/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/connectivity/checker/FonCheckConnectService.java
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/fon-android/!svn/ver/170/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity
+END
+ConnectivityUtis.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/ConnectivityUtis.java
+END
+FonNetworkListProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/FonNetworkListProvider.java
+END
+RouterConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/fon-android/!svn/ver/170/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/RouterConnectService.java
+END
+RouterConnectionStateChangeReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/fon-android/!svn/ver/159/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/RouterConnectionStateChangeReceiver.java
+END
+FonConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/fon-android/!svn/ver/159/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/connectivity/FonConnectService.java
+END

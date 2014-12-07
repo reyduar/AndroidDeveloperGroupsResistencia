@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FONTheme" parent="@android:style/Theme.Light.NoTitleBar">
+
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:checkboxStyle">@style/CheckBox</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        
+    </style>
+    
+</resources>

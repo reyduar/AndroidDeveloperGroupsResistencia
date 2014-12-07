@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_text_button">#003399</color>
+    <color name="color_text_view">#0033FF</color>
+    <color name="color_text_label">#6699FF</color>
+    
+</resources>

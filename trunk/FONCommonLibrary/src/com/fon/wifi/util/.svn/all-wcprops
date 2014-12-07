@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util
+END
+DisplayToast.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/DisplayToast.java
+END
+HttpUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/HttpUtils.java
+END
+RemoveHttpsRedirectHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/RemoveHttpsRedirectHandler.java
+END
+Utils.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/Utils.java
+END
+LogRedirectHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/LogRedirectHandler.java
+END
+WISPrConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/WISPrConstants.java
+END
+WISPrUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/WISPrUtil.java
+END
+FONUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/FONUtils.java
+END
+BackupAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/BackupAgent.java
+END
+FONPreferences.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/FONPreferences.java
+END
+BackupAgentHelperWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/BackupAgentHelperWrapper.java
+END
+IntentActionsFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/IntentActionsFactory.java
+END
+HttpResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/util/HttpResult.java
+END

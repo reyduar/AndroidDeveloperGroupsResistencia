@@ -1,0 +1,111 @@
+package com.fon.wifi.logger;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.xml.parsers.FactoryConfigurationError;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
+import android.util.Log;
+
+import static com.fon.wifi.util.WISPrConstants.*;
+
+import com.fon.wifi.handler.WISPrInfoHandler;
+import com.fon.wifi.handler.WISPrResponseHandler;
+import com.fon.wifi.util.FONUtils;
+import com.fon.wifi.util.HttpResult;
+import com.fon.wifi.util.HttpUtils;
+import com.fon.wifi.util.WISPrUtil;
+
+public class WISPrLogger implements WebLogger {
+
+	private static final String TAG = WISPrLogger.class.getName();
+
+	private static final String DEFAULT_LOGOFF_URL = "http://192.168.182.1:3990/logoff";
+
+	protected String userParam = "UserName";
+
+	protected String passwordParam = "Password";
+
+	public LoggerResult login(String user, String password) {
+		LoggerResult res = new LoggerResult(WISPR_RESPONSE_CODE_INTERNAL_ERROR, null);
+		try {
+			HttpResult httpResult = HttpUtils.getUrl(CONNECTION_CHECK_URL);
+			String blockedUrlText = httpResult.getContent();
+			if (!blockedUrlText.equalsIgnoreCase(CONNECTED)) {
+				String WISPrXML = WISPrUtil.getWISPrXML(blockedUrlText);
+				if (WISPrXML != null) {
+					// Log.d(TAG, "XML Found:" + WISPrXML);
+					WISPrInfoHandler wisprInfo = new WISPrInfoHandler();
+					android.util.Xml.parse(WISPrXML, wisprInfo);
+
+					if (wisprInfo.getMessageType().equals(String.valueOf(WISPR_MESSAGE_TYPE_INITIAL))
+							&& wisprInfo.getResponseCode().equals(String.valueOf(WISPR_RESPONSE_CODE_NO_ERROR))) {
+						res = tryToLogin(user, password, wisprInfo);
+					}
+				} else {
+					// Log.d(TAG, "XML NOT FOUND : " + blockedUrlText);
+					res = new LoggerResult(WISPR_NOT_PRESENT, null);
+				}
+			} else {
+				res = new LoggerResult(ALREADY_CONNECTED, DEFAULT_LOGOFF_URL);
+			}
+		} catch (Exception e) {
+			Log.e(TAG, "Error trying to log", e);
+			res = new LoggerResult(WISPR_RESPONSE_CODE_INTERNAL_ERROR, null);
+		}
+		// Log.d(TAG, "WISPR Login Result: " + res);
+
+		return res;
+	}
+
+	private LoggerResult tryToLogin(String user, String password, WISPrInfoHandler wisprInfo) throws IOException,
+			ParserConfigurationException, FactoryConfigurationError {
+		int res = WISPR_RESPONSE_CODE_INTERNAL_ERROR;
+		String logOffUrl = null;
+		String targetURL = wisprInfo.getLoginURL();
+		if (FONUtils.isSafeUrl(targetURL)) {
+			Log.d(TAG, "Trying to Log " + targetURL);
+			Map<String, String> data = new HashMap<String, String>();
+			data.put(userParam, user);
+			data.put(passwordParam, password);
+
+			String htmlResponse = HttpUtils.getUrlByPost(targetURL, data).getContent();
+			// Log.d(TAG, "HTML Reponse:" + htmlResponse);
+			if (htmlResponse != null) {
+				String response = WISPrUtil.getWISPrXML(htmlResponse);
+				if (response != null) {
+					// Log.d(TAG, "WISPr response:" + response);
+					WISPrResponseHandler wrh = new WISPrResponseHandler();
+					try {
+						android.util.Xml.parse(response, wrh);
+						res = wrh.getResponseCode();
+						logOffUrl = wrh.getLogoffURL();
+					} catch (SAXException saxe) {
+						Log.e(TAG, saxe.getMessage());
+						res = WISPR_NOT_PRESENT;
+					}
+				} else {
+					// Log.d(TAG, "Response is null");
+					res = WISPR_NOT_PRESENT;
+				}
+			}
+		} else {
+			Log.e(TAG, "Not safe URL:" + targetURL);
+		}
+
+		// If we dont find the WISPR Response or we cannot parse it, we check if we have connection
+		// (some times happens)
+		if (res == WISPR_NOT_PRESENT) {
+			if (FONUtils.isConnected()) {
+				res = WISPR_RESPONSE_CODE_LOGIN_SUCCEEDED;
+				logOffUrl = DEFAULT_LOGOFF_URL;
+			}
+		}
+
+		return new LoggerResult(res, logOffUrl);
+	}
+}

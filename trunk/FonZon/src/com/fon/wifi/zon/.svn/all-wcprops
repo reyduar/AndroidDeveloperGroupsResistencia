@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/fon-android/!svn/ver/168/main/dev/trunk/FonZon/src/com/fon/wifi/zon
+END
+HelpListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/HelpListActivity.java
+END
+FonNetworkListProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/FonNetworkListProvider.java
+END
+NotificationHandlerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/NotificationHandlerService.java
+END
+HomeActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/HomeActivity.java
+END
+ResetStatusService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/ResetStatusService.java
+END
+AccountActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/AccountActivity.java
+END
+RouterConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/RouterConnectService.java
+END
+ResetStatusReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/ResetStatusReceiver.java
+END
+FonCheckConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/FonCheckConnectService.java
+END
+FonConnectService.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/fon-android/!svn/ver/152/main/dev/trunk/FonZon/src/com/fon/wifi/zon/FonConnectService.java
+END
+FonApp.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/fon-android/!svn/ver/168/main/dev/trunk/FonZon/src/com/fon/wifi/zon/FonApp.java
+END
+FonBlackListProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/FonBlackListProvider.java
+END
+PreferencesAdvanced.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/PreferencesAdvanced.java
+END
+InternetCheckAlarmReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/fon-android/!svn/ver/160/main/dev/trunk/FonZon/src/com/fon/wifi/zon/InternetCheckAlarmReceiver.java
+END
+WifiScanReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/WifiScanReceiver.java
+END
+WebActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/WebActivity.java
+END
+RouterConnectionStateChangeReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/RouterConnectionStateChangeReceiver.java
+END
+InternetCheckOnStandByReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/fon-android/!svn/ver/147/main/dev/trunk/FonZon/src/com/fon/wifi/zon/InternetCheckOnStandByReceiver.java
+END

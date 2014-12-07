@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/fon-android/!svn/ver/145/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/blacklist
+END
+FonBlackListManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/blacklist/FonBlackListManager.java
+END
+FonBlackListProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/fon-android/!svn/ver/145/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/blacklist/FonBlackListProvider.java
+END

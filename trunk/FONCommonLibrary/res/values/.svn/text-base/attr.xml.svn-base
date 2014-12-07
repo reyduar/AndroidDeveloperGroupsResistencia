@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <declare-styleable name="FONTheme">
+        <attr name="check_fon_connection_on_stand_by" format="boolean" />
+        <attr name="check_fon_connection_in_background" format="boolean" />
+        <attr name="check_fon_connection_minutes_interval" format="integer" />
+        <!-- assets cross app -->
+        <attr name="drawable_logo_header" format="reference" />
+        <attr name="color_bg_header_bar" format="color|reference" />
+        
+        <attr name="color_title_bar_background" format="color|reference" />
+        <attr name="color_title_bar_font" format="color|reference" />
+        
+        <attr name="color_font_content" format="color|reference" />
+        
+        <!-- assets home -->
+        <attr name="drawable_background" format="reference" />
+        <attr name="drawable_logo_banner" format="reference" />
+        <attr name="drawable_ic_account" format="reference" />
+        <attr name="drawable_ic_help" format="reference" />
+        
+        <!-- assets help -->
+        <attr name="help_list_selector" format="reference" />
+        <attr name="drawable_arrow" format="reference" />
+        <attr name="color_divider" format="color|reference" />
+        <attr name="color_font_link" format="color|reference" />
+        
+        <!-- assets alert dialog -->
+        <attr name="drawable_background_dialog_header" format="reference" />
+        <attr name="drawable_background_dialog_body" format="reference" />
+        <attr name="color_dialog_title_font" format="color|reference" />
+        
+        <!-- assets notification -->
+        <attr name="drawable_ic_notification_clear" format="reference" />
+        
+        <!-- assets web view (help and about) -->
+        <attr name="colo_bg_web_view" format="color|reference" />
+        
+        <!-- assets menu -->
+        <attr name="drawable_ic_menu_quit" format="reference" />
+        
+        <!-- button font color-->
+        <attr name="button_style" format="reference" />
+        <attr name="button_text_appearence" format="reference" />
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AlertDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:buttonStyle">?button_style</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+	<style name="DialogWindowTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?color_dialog_title_font</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?drawable_background_dialog_header</item>
+    </style>
+    
+    <style name="Button_Home">
+        <item name="android:layout_width">220dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    
+    <style name="TopHeader" parent="@android:style/Widget.TextView">
+        <item name="android:background">?color_title_bar_background</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?color_title_bar_font</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    
+    <style name="Description" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">?color_font_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Description.Help" >
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:linksClickable">true</item>
+    </style>
+  
+    <style name="NotificationText" />
+
+    <style name="NotificationTitle">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

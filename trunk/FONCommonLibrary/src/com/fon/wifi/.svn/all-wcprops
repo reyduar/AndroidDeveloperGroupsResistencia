@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/fon-android/!svn/ver/181/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi
+END
+FonApp.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/fon-android/!svn/ver/151/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/FonApp.java
+END
+FONStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/FONStatus.java
+END
+ResetStatusService.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/ResetStatusService.java
+END
+WifiScanReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/WifiScanReceiver.java
+END
+FONLogin.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/fon-android/!svn/ver/124/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/FONLogin.java
+END
+ResetStatusReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/ResetStatusReceiver.java
+END

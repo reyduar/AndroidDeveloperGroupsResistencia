@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Accès WiFi</string>
+    <string name="connectionNotifications">Alertes</string>
+    <string name="connectionNotificationsEnable">Activer les Alertes</string>
+    <string name="connectionNotificationsSummary">Recevoir des notifications lorsque vous vous connectez à Belgacom Fon</string>
+    <string name="connectionNotificationsVibrate">Vibration</string>
+    <string name="connectionNotificationsVibrateSummary">Vibration à la connexion</string>
+    <string name="connectionAutoEnable">Connexion automatique</string>
+    <string name="connectionAutoSummary">Se connecter automatiquement à n\'importe quel hotspot Belgacom Fon disponible</string>
+    <string name="connectionRingtoneSummary">Configurer votre sonnerie d\'Alertes</string>
+    <string name="ringtone">Sonnerie</string>
+    <string name="general">Configuration de connexion</string>
+    <string name="label_account">Mon Compte</string>
+    <string name="label_settings">Paramètres</string>
+    <string name="label_help">Aide</string>
+    <string name="label_log_off">Déconnexion</string>
+    <string name="label_save">Sauver</string>
+    <string name="label_about">À propos de</string>
+    <string name="label_confirm_log_off">Souhaitez-vous vous déconnecter du réseau Fon?</string>
+    <string name="btn_log_off">Se déconnecter</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_ok">OK</string>
+    <string name="label_username">Nom d\'utilisateur:</string>
+    <string name="label_password">Mot de passe:</string>
+    <string name="label_show_password">Montrer le Mot de passe</string>
+    <string name="label_hint_account">Saisissez vos identification Belgacom. \ n Vous vous connecterez automatiquement lorsque vous trouverez un hotspot WiFi Belgacom.</string>
+    <string name="notif_error">Erreur</string>
+    <string name="notif_default_ssid">Belgacom Fon</string>
+    <string name="notif_error_100">Erreur</string>
+    <string name="notif_error_1024">Erreur d\'authentification</string>
+    <string name="notif_error_255">Erreur interne</string>
+    <string name="notif_error_not_authorized">Non autorisé</string>
+    <string name="notif_error_not_such_user">Utilisateur non trouvé</string>
+    <string name="notif_error_not_enough_credit">Crédit insuffisant</string>
+    <string name="notif_error_user_not_found">Utilisateur non trouvé</string>
+    <string name="notif_error_user_in_black_list">L\'utilisateur a été blacklisté</string>
+    <string name="notif_error_unknown">Erreur inconnue</string>
+    <string name="notif_error_title">Erreure Belgacom Fon</string>
+    <string name="notif_error_text">Erreur de connexion à Belgacom Fon</string>
+    <string name="notif_connected_title">Belgacom Fon</string>
+    <string name="notif_connected_text">Connecté à %s</string>
+    <string name="notif_disconnected_title">Belgacom Fon déconnecté</string>
+    <string name="notif_disconnected_text">Déconnecté de %s</string>
+    <string name="notif_available_title">Belgacom Fon disponible</string>
+    <string name="notif_available_text">Appuyez ici pour vous connecter</string>
+    <string name="notif_no_credentials_title">identifints Belgacom Fon</string>
+    <string name="notif_no_credentials_text">Configurer le nom d\'utilisateur et mot de passe que vous utiliserez pour vous connecter avec Belgacom Fon</string>
+    <string name="html_language_folder">fr</string>
+    <string name="help_title">Aide et Support</string>
+    <string name="help_text">Si vous besoin d\'aide, veuillez visiter <a href="http://corp.fon.com/support/">http://corp.fon.com/support/</a></string>
+    <string-array name="help_question_list">
+        <item>Fon, c\'est quoi?</item>
+        <item>Qu\'est-ce qu\'un Fon Spot?</item>
+        <item>Comment rejoindre Fon?</item>
+        <item>Qu\'est-ce qu\'un passe d\'accès Fon?</item>
+        <item>Les Fon Spots sont-ils sécurisés?</item>
+    </string-array>
+</resources>

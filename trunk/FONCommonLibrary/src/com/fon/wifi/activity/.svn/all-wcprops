@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/fon-android/!svn/ver/181/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/activity
+END
+FonActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/activity/FonActivity.java
+END
+HelpListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/fon-android/!svn/ver/178/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/activity/HelpListActivity.java
+END
+HomeActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fon-android/!svn/ver/181/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/activity/HomeActivity.java
+END
+PreferencesAdvanced.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/activity/PreferencesAdvanced.java
+END
+AccountActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/fon-android/!svn/ver/149/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/activity/AccountActivity.java
+END
+WebActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/fon-android/!svn/ver/143/main/dev/trunk/FONCommonLibrary/src/com/fon/wifi/activity/WebActivity.java
+END

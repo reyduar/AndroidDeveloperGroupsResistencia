@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/fon-android/!svn/ver/55/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger
+END
+HTTPLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/fon-android/!svn/ver/3/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger/HTTPLogger.java
+END
+LivedoorLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/fon-android/!svn/ver/4/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger/LivedoorLogger.java
+END
+WISPrLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/fon-android/!svn/ver/55/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger/WISPrLogger.java
+END
+BTFonLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/fon-android/!svn/ver/3/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger/BTFonLogger.java
+END
+SimpleHTTPLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/fon-android/!svn/ver/47/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger/SimpleHTTPLogger.java
+END
+NeufLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/fon-android/!svn/ver/47/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger/NeufLogger.java
+END
+WebLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/fon-android/!svn/ver/4/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger/WebLogger.java
+END
+LoggerResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fon-android/!svn/ver/47/main/dev/trunk/AndroidWISPWork/src/com/belgacom/fon/logger/LoggerResult.java
+END

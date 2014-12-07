@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/fon-android/!svn/ver/175/main/dev/trunk/FonBelgacom
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/fon-android/!svn/ver/139/main/dev/trunk/FonBelgacom/.classpath
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/fon-android/!svn/ver/127/main/dev/trunk/FonBelgacom/project.properties
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/fon-android/!svn/ver/127/main/dev/trunk/FonBelgacom/.project
+END
+proguard-project.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/fon-android/!svn/ver/127/main/dev/trunk/FonBelgacom/proguard-project.txt
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/fon-android/!svn/ver/156/main/dev/trunk/FonBelgacom/AndroidManifest.xml
+END
