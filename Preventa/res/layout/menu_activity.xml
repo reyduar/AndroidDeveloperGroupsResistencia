@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:id="@+id/widget29" 
+            android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" 
+	        xmlns:android="http://schemas.android.com/apk/res/android">
+	        
+	
+	
+	<TableLayout android:layout_width="fill_parent"
+				 android:layout_height="fill_parent"
+			
+				 android:paddingTop="30dip" 
+				 android:layout_gravity="center_horizontal">
+        
+        	  
+        
+		<TableRow android:layout_height="wrap_content"
+				  android:layout_width="wrap_content">
+			
+			<LinearLayout
+        		android:orientation="vertical"
+        		android:layout_width="wrap_content"
+        		android:layout_weight="2"
+        		android:layout_height="wrap_content">
+
+        		<ImageButton android:id="@+id/clientes_main_screen"
+					     android:layout_width="wrap_content"
+			      		 android:layout_height="wrap_content"
+			      		 android:layout_gravity="center_horizontal"
+			      		 android:onClick="ClickHandler"
+			             android:src="@drawable/clientes" />
+
+        		<TextView
+            		android:id="@+id/clientes_button_entry"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:singleLine="true"
+            		android:layout_gravity="center_horizontal"
+            		android:text="Clientes"/>
+
+   		 </LinearLayout>
+   		 
+   		 
+   		 <LinearLayout
+        		android:orientation="vertical"
+        		android:layout_width="wrap_content"
+        		android:layout_weight="2"
+        		android:layout_height="wrap_content">
+
+        		<ImageButton android:id="@+id/productos"
+					     android:layout_width="wrap_content"
+			      		 android:layout_height="wrap_content"
+			      		 android:layout_gravity="center_horizontal"
+			      		 android:onClick="ClickHandler"
+			             android:src="@drawable/productos" />
+
+        		<TextView
+            		android:id="@+id/clientes_button_entry"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_gravity="center_horizontal"
+            		android:singleLine="true"
+            		android:text="Productos"/>
+
+   		 </LinearLayout>
+   		  
+		</TableRow>
+		
+		<TableRow android:layout_height="wrap_content"
+				  android:layout_width="wrap_content">
+			
+			<LinearLayout
+        		android:orientation="vertical"
+        		android:layout_width="fill_parent"
+        		android:layout_weight="2"
+        		android:layout_height="fill_parent">
+
+        		<ImageButton android:id="@+id/sync"
+					     android:layout_width="wrap_content"
+			      		 android:layout_height="wrap_content"
+			      		 android:layout_gravity="center_horizontal"
+			      		 android:onClick="ClickHandler"
+			             android:src="@drawable/pedidos" />
+
+        		<TextView
+            		android:id="@+id/clientes_button_entry"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:singleLine="true"
+            		android:layout_gravity="center_horizontal"
+            		android:text="Pedidos"/>
+
+   		 </LinearLayout>
+   		 
+   		 
+   		 <LinearLayout
+        		android:orientation="vertical"
+        		android:layout_width="fill_parent"
+        		android:layout_weight="2"
+        		android:layout_height="fill_parent">
+
+        		<ImageButton android:id="@+id/button2"
+					     android:layout_width="wrap_content"
+			      		 android:layout_height="wrap_content"
+			      		 android:layout_gravity="center_horizontal"
+			      		 android:onClick="ClickHandler"
+			             android:src="@drawable/reportes" />
+
+        		<TextView
+            		android:id="@+id/clientes_button_entry"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_gravity="center_horizontal"
+            		android:singleLine="true"
+            		android:text="Reportes"/>
+
+   		 </LinearLayout>
+   		  
+		</TableRow>
+		
+		
+<!--		<TableRow android:gravity="center_horizontal" android:layout_width="fill_parent">-->
+<!--			<TextView android:text="Clientes" />-->
+<!--			<TextView android:text="Productos" />-->
+<!--		</TableRow>-->
+
+	</TableLayout>
+</ScrollView>
+

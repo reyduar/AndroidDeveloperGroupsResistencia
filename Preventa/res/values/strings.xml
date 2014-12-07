@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="hello">Hello World, Clientes!</string>
+    <string name="app_name">Preventa</string>
+	<string name="search_client">Buscar Cliente</string>
+	<string name="app_activity_clientes">Clientes</string>
+	<string name="app_activity_cliente">Datos del Cliente</string>
+	<string name="search_instructions">Presionar el boton de busqueda para buscar un cliente</string>
+	<!-- Search failure message. -->
+    <string name="no_results">no hay clientes</string>
+    <plurals name="search_results">
+      	<item quantity="one">%d cliente encontrado</item>
+      	<item quantity="other">%d clientes encontrados</item>
+    </plurals>
+    
+<!--    menu contextual pantalla de clientes-->
+    <string name="context_menu_cliente_atender_label">Atender</string>
+    <string name="context_menu_cliente_no_atender_label">No Atender</string>
+    <string name="context_menu_cliente_ver_label">Ver Datos</string>
+    
+</resources>

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android='http://schemas.android.com/apk/res/android'
+    android:layout_width='fill_parent'
+    android:layout_height="42dip"
+    android:padding='4dip'>
+
+    <TextView
+        android:id='@+id/address_entry'
+        android:layout_width='wrap_content'
+        android:layout_height='wrap_content'       
+        android:layout_alignParentBottom='true'
+        android:layout_alignParentLeft='true'
+        android:textSize="10dip"
+        android:singleLine='true'
+        android:ellipsize='marquee'
+        android:text='Simple application that shows how to use RelativeLayout' />
+    <TextView
+        android:id="@+id/name_entry"
+        android:layout_width='wrap_content'
+        android:layout_height='wrap_content'
+        android:textSize="14dip"  
+        android:layout_alignParentLeft='true'
+        android:layout_alignParentTop='true'
+        android:layout_above='@id/address_entry'
+        android:layout_alignWithParentIfMissing='true' 
+        android:text='My Application' />
+<!--     <ImageView-->
+<!--        android:id='@+id/icon'-->
+<!--        android:layout_width='wrap_content'-->
+<!--        android:layout_height='wrap_content'-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_alignParentRight='true'-->
+<!--        android:layout_marginLeft='6dip'/>-->
+<!--        android:src='@android:drawable/stat_sys_phone_call' -->
+
+     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:gravity="center_vertical"
+    	android:layout_alignParentRight='true'
+    	android:layout_marginLeft='2dip'
+    	android:padding='1dip'> 
+    	
+    	<ImageView
+        	android:id='@+id/icon'
+        	android:layout_width='wrap_content'
+        	android:layout_height='wrap_content'>
+<!--        	android:src='@android:drawable/stat_sys_phone_call'>-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_alignParentRight='true'-->
+<!--        android:layout_marginLeft='6dip'>-->
+<!--        android:src='@android:drawable/stat_sys_phone_call'>-->
+        </ImageView>
+        
+        <TextView
+        	android:id='@+id/pedidos'
+        	android:layout_width='wrap_content'
+        	android:layout_height='wrap_content'       
+        	android:textSize="10dip"
+        	android:singleLine='true'>
+<!--        	android:text='2'>-->
+        </TextView> 
+    	
+    	
+     </LinearLayout>
+          
+          
+</RelativeLayout>

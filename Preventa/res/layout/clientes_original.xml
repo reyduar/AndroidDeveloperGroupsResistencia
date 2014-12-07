@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding='1dip' 
+		android:id="@+id/top_control_bar">
+<!--		<Spinner android:id="@+id/sort_by" -->
+<!--		         android:layout_width="fill_parent"-->
+<!--			     android:layout_height="wrap_content" /> -->
+<!--			     android:entries="@array/default_sorts" />-->
+
+    <Button android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight='true'
+            android:text="Limpiar">
+    </Button>
+    <EditText android:id="@+id/filterText" 
+              android:layout_height="wrap_content" 
+              android:layout_width="fill_parent"
+              android:singleLine="true" 
+              android:layout_toLeftOf="@+id/clearButton" 
+              android:hint="Buscar">
+    </EditText>
+    
+	
+	</RelativeLayout>
+	<LinearLayout android:id="@+id/bottom_control_bar"
+				  android:layout_width="fill_parent" 
+				  android:layout_height="wrap_content"
+		          android:layout_alignParentBottom="true">
+		<TextView
+            android:id="@+id/text"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="17dp"
+            android:background="@android:drawable/title_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+    </TextView> 
+	</LinearLayout>
+	<ListView android:id="@+id/listClientes" 
+	          android:layout_width="fill_parent"
+		      android:layout_height="0dip" 
+		      android:layout_below="@id/top_control_bar" 
+		      android:layout_above="@id/bottom_control_bar">
+    </ListView>
+<!--	<TextView android:id="@android:id/empty" -->
+<!--	          android:layout_width="wrap_content"-->
+<!--		      android:layout_height="wrap_content" -->
+<!--		      android:text="@string/search_instructions"-->
+<!--		      android:layout_below="@id/top_control_bar" -->
+<!--		      android:layout_above="@id/bottom_control_bar" />-->
+</RelativeLayout>

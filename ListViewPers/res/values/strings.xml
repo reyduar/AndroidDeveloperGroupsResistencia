@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, ListViewPersActivity!</string>
+	<string name="app_name">ListViewPers</string>
+	<string-array name="array_provincias">
+		<item>La Coruña</item>
+		<item>Lugo</item>
+		<item>Orense</item>
+		<item>Pontevedra</item>
+		<item>Oviedo</item>
+		<item>Las Palmas</item>
+		<item>Sevilla</item>
+		<item>Málaga</item>
+		<item>Córdoba</item>
+		<item>Granada</item>
+		<item>Jaén</item>
+	</string-array>
+	
+</resources>
