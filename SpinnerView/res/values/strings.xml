@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">SpinnerView</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_spinner_view">SpinnerViewActivity</string>
+
+    <string-array name="array_provincias">
+        <item>Cordoba</item>
+        <item>La Plata</item>
+        <item>Chaco</item>
+        <item>La Plata</item>
+        <item>Formosa</item>
+        <item>Corrientes</item>
+        <item>Santa Fe</item>
+        <item>Chubut</item>
+        <item>La Rioja</item>
+        <item>Buenos Aires</item>
+        <item>Salta</item>
+    </string-array>
+
+</resources>

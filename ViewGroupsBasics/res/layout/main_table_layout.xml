@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    > 
+    <TableRow >
+        <TextView android:text="Usuario : " android:width="120px"/>
+        <EditText android:id="@+id/txtusuario" android:width="200px"/>
+    </TableRow>
+    <TableRow >
+        <TextView android:text="Password : "/>
+        <EditText android:id="@+id/txtpass" android:password="true" />
+    </TableRow>
+    <TableRow >
+        <TextView />
+        <CheckBox android:id="@+id/chkrememberp" 
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:text="Recordar Contraseña"/>
+    </TableRow>
+    <TableRow >
+         <Button 
+        android:text="Login"
+        android:id="@+id/btnlogin" 
+        />
+    </TableRow>
+</TableLayout>
